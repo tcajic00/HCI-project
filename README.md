@@ -1,5 +1,5 @@
-# HCI-project
-HCI project (G4U) by students Antonio Musulin and Tomislav Cajic
+# G4U web store
+G4U is a web platform where you can review and buy videogames.
 
 
 ### High fidelity (desktop) in Figma:
