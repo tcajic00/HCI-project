@@ -1,0 +1,12 @@
+.logo {
+    display: flex;
+    flex-flow: column;
+    width: fit-content;
+    height: 52px;
+  }
+  
+  .logoText {
+    font-family: fantasy;
+    font-size: 52px;
+    padding-left: 20px;
+  }
