@@ -4,7 +4,7 @@ import NavigationHeader from '../components/NavigationHeader'
 
 const IndexPage = () => (
   <main>
-   <NavigationHeader />
+    <NavigationHeader activeTab = "Home" />
   </main>
 )
 
