@@ -2,11 +2,11 @@
     display: flex;
     justify-content: space-evenly;
     flex-flow: row;
-    width: 780px;
+    width: 800px;
   }
   
   .navigationBar li {
-    padding: 20px 20px;
+    padding: 27px 22px;
     margin-left: 3px;
     margin-right: 3px;
     list-style: none;
