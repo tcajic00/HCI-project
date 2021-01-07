@@ -19,6 +19,7 @@
   }
   .navigationBar li:hover {
     color: #FF8200;
+    background-color: #f3f3f3;
     border-bottom: 4px solid #FF8200;
     cursor: pointer;
   }
