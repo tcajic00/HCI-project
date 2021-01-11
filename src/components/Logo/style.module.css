@@ -1,9 +1,9 @@
 .logo {
-    margin: 10px 10px;
-    padding-left: 10px;
-    display: flex;
-    height: 50px;
-    width: 137px;
-    background: url("../../images/logo.png") no-repeat center center;
-    background-size: cover;
+  margin-right: 0;
+  padding-left: 10px;
+  display: flex;
+  height: 50px;
+  width: 137px;
+  background: url("../../images/logo.png") no-repeat center center;
+  background-size: cover;
 }

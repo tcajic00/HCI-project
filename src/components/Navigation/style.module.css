@@ -1,5 +1,7 @@
 .navigation {
-    height: 65px;
-    display: flex;
-    align-items: center;
-  }
+  height: 65px;
+  width: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

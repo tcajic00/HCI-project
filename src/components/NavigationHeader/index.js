@@ -1,14 +1,14 @@
 import React from 'react'
 
-import Logo from '../Logo'
 import Navigation from '../Navigation'
+import NavigationBar from '../NavigationBar'
 
 import styles from './style.module.css'
 
 const NavigationHeader = ({ activeTab }) => (
   <section className={styles.navigationHeader}>
-      <Logo />
-      <Navigation activeTab={activeTab} />
+      <Navigation />
+      <NavigationBar activeTab={activeTab} />
   </section>
 )
 
