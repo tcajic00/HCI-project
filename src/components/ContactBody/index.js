@@ -1,5 +1,11 @@
 import React from 'react'
 
+import phonePhoto from 'C:/Users/TOME/Desktop/test1/HCI-project/src/images/phone.jpg'
+
+import emailPhoto from 'C:/Users/TOME/Desktop/test1/HCI-project/src/images/email.png'
+
+import addressPhoto from 'C:/Users/TOME/Desktop/test1/HCI-project/src/images/location.jpg'
+
 import { Card, CardContent, Grid, Typography} from '@material-ui/core' 
 
 import styles from './style.module.css'
@@ -24,7 +30,7 @@ const ContactBody = () => (
                 </Typography>
 
                 
-                <img className={styles.img} src="https://freeiconshop.com/wp-content/uploads/edd/mail-open-outline-filled.png"/>
+                <img className={styles.img} src={emailPhoto}/>
             </CardContent>
             
         </Card>
@@ -35,7 +41,7 @@ const ContactBody = () => (
             <CardContent
                 className={styles.cardContent}
             >
-                <img className={styles.img} src="https://cdn4.iconfinder.com/data/icons/social-media-2097/94/phone-512.png"/>
+                <img className={styles.img} src={phonePhoto}/>
                 <Typography className={styles.typo} variant="title">
                     Phone: +385 12 345 6789
                 </Typography>
@@ -67,7 +73,7 @@ const ContactBody = () => (
                 </Typography>
                 
             </CardContent>
-            <img className={styles.addimg} src="https://static.vecteezy.com/system/resources/previews/001/265/765/non_2x/map-with-location-pin-vector.jpg"/>
+            <img className={styles.addimg} src={addressPhoto}/>
         </Card>
     </Grid>
 )

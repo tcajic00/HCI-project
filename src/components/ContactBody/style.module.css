@@ -5,18 +5,15 @@
 
 .cardContent {
   display: flex;
-  margin: 10px;
+  margin: 0;
   justify-content: space-around;
   align-items: center;
-  min-height: max-content;
+  height: 95px;
 }
 
 .card {
-  min-height: max-content;
-  min-width: max-content;
-  width: 470px;
+  width: 450px;
   height: 135px;
-  margin: 3em;
 }
 
 .email {
@@ -24,8 +21,8 @@
 }
 
 .img {
-  max-width: 75px;
-  max-height: 75px;
+  max-width: 90px;
+  max-height: 90px;
 }
 
 .typo {
@@ -35,14 +32,18 @@
 }
 
 .address {
-  min-height: max-content;
-  width: 80%;
-  height: 15em;
+  width: 60%;
+  height: 25em;
   display: flex;
   justify-content: space-between;
-  padding: 1em;
 }
 
 .addimg {
-  max-height: 15em;
+  max-height: 25em;
+}
+
+.addcc {
+  margin: 1em;
+  min-height: 15em;
+  align-self: center;
 }
