@@ -2,7 +2,7 @@ import React from 'react'
 
 import styles from './style.module.css'
 
-const navTabs = ['Home', 'About', 'Games', 'News & Reviews', 'Contact', 'Cart', 'Sign In']
+const navTabs = ['Home', 'Games', 'News & Reviews', 'Contact', 'About' , 'Cart', 'Sign In']
 
 const NavigationBar = ({activeTab}) => (
   <nav className={styles.navigationBar}>
