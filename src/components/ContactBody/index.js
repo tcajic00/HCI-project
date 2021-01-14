@@ -18,40 +18,49 @@ const ContactBody = () => (
     container
     direction="column"
     justify="space-around"
-    alignItems="center"
     >
         <img src={bigPhoto} className={styles.mainPhoto}/>
-        <Card 
-        className={styles.card}
-        variant="elevation"
-        >
-            <CardContent
-                className={styles.cardContent}
+        <div className={styles.bodyContent}>
+        <div className={styles.emailContainer}>
+            <h1>E-mail:</h1>
+            <Card 
+            className={styles.card}
+            variant="elevation"
             >
-                <Typography className={styles.typo} variant="title">
-                    Email: info@g4u.hr
-                </Typography>
+                <CardContent
+                    className={styles.cardContent}
+                >
+                    <Typography className={styles.typo} variant="title">
+                        info@g4u.hr
+                    </Typography>
 
+                    
+                    <img className={styles.img} src={emailPhoto}/>
+                </CardContent>
                 
-                <img className={styles.img} src={emailPhoto}/>
-            </CardContent>
-            
-        </Card>
-        <Card 
-        variant="elevation"
-        className={styles.card}
-        >
-            <CardContent
-                className={styles.cardContent}
-            >
-                <img className={styles.img} src={phonePhoto}/>
-                <Typography className={styles.typo} variant="title">
-                    Phone: +385 12 345 6789
-                </Typography>
-            </CardContent>
-            
-        </Card>
+            </Card>
+        </div>
 
+        <div className={styles.phoneContainer}>
+            <h1 className={styles.title}>Phone:</h1>
+            <Card 
+            variant="elevation"
+            className={styles.card}
+            >
+                <CardContent
+                    className={styles.cardContent}
+                >
+                    <img className={styles.img} src={phonePhoto}/>
+                    <Typography className={styles.typo} variant="title">
+                        +385 12 345 6789
+                    </Typography>
+                </CardContent>
+                
+            </Card>
+        </div>
+        
+        <div className={styles.addressContainer}>
+            <h1>Address:</h1>
         <Card 
         variant="elevation"
         className={styles.address}
@@ -60,24 +69,26 @@ const ContactBody = () => (
                 className={styles.addcc}
             >
                 <Typography className={styles.typo} variant="title">
-                    Address: 
+                    Head office:
                     <Typography variant="subtitle1">
-                        Head office:
-                        <Typography variant="subtitle2">
-                            Ulica Matice hrvatske 15, Split, Croatia
-                        </Typography>
-                    </Typography>
-                    <Typography variant="subtitle1">
-                        Research and development:
-                        <Typography variant="subtitle2">
-                            Metković, Croatia
-                        </Typography>
+                        Ulica Matice hrvatske 15, Split, Croatia
                     </Typography>
                 </Typography>
-                
+                <Typography className={styles.typo} variant="title">
+                    Research and development:
+                    <Typography variant="subtitle1">
+                        Metković, Croatia
+                    </Typography>
+                </Typography>
             </CardContent>
             <img className={styles.addimg} src={addressPhoto}/>
         </Card>
+        </div>
+
+        
+            
+        </div>
+        
     </Grid>
 )
 
