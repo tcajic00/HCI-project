@@ -6,6 +6,8 @@ import emailPhoto from 'C:/Users/TOME/Desktop/test1/HCI-project/src/images/email
 
 import addressPhoto from 'C:/Users/TOME/Desktop/test1/HCI-project/src/images/location.jpg'
 
+import bigPhoto from 'C:/Users/TOME/Desktop/test1/HCI-project/src/images/contactBig1.jpg'
+
 import { Card, CardContent, Grid, Typography} from '@material-ui/core' 
 
 import styles from './style.module.css'
@@ -18,6 +20,7 @@ const ContactBody = () => (
     justify="space-around"
     alignItems="center"
     >
+        <img src={bigPhoto} className={styles.mainPhoto}/>
         <Card 
         className={styles.card}
         variant="elevation"
