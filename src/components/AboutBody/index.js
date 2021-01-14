@@ -1,12 +1,6 @@
 import React from 'react'
 
-import phonePhoto from 'C:/Users/TOME/Desktop/test1/HCI-project/src/images/phone.jpg'
-
-import emailPhoto from 'C:/Users/TOME/Desktop/test1/HCI-project/src/images/email.png'
-
-import addressPhoto from 'C:/Users/TOME/Desktop/test1/HCI-project/src/images/location.jpg'
-
-import bigPhoto from 'C:/Users/TOME/Desktop/test1/HCI-project/src/images/aboutMain.jpeg'
+import bigPhoto from '../../images/aboutMain.jpeg'
 
 import { Card, CardContent, Grid, Typography} from '@material-ui/core' 
 
@@ -25,6 +19,12 @@ const AboutBody = () => (
         className={styles.card}
         variant="elevation"
         >
+            <CardContent>
+                <Typography>
+
+                </Typography>
+                <img  className={styles.pic}/>
+            </CardContent>
 
         </Card>
         <Card 

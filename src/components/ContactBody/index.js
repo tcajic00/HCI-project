@@ -1,12 +1,12 @@
 import React from 'react'
 
-import phonePhoto from 'C:/Users/TOME/Desktop/test1/HCI-project/src/images/phone.jpg'
+import phonePhoto from '../../images/phone.jpg'
 
-import emailPhoto from 'C:/Users/TOME/Desktop/test1/HCI-project/src/images/email.png'
+import emailPhoto from '../../images/email.png'
 
-import addressPhoto from 'C:/Users/TOME/Desktop/test1/HCI-project/src/images/location.jpg'
+import addressPhoto from '../../images/location.jpg'
 
-import bigPhoto from 'C:/Users/TOME/Desktop/test1/HCI-project/src/images/contactBig1.jpg'
+import bigPhoto from '../../images/contactBig1.jpg'
 
 import { Card, CardContent, Grid, Typography} from '@material-ui/core' 
 
