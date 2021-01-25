@@ -1,6 +1,6 @@
 .navigationBar {
     display: flex;
-    justify-content: space-evenly;
+    justify-content:flex-end;
     flex-flow: row;
     width: 800px;
   }

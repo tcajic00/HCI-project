@@ -6,7 +6,7 @@ import NewsContainer from '../components/NewsContainer'
 
 const NewsPage = () => (
   <main>
-    <NavigationHeader activeTab = "News & Reviews" />
+    <NavigationHeader activeTab = "News" />
     <NewsContainer />
     <Footer />
   </main>
