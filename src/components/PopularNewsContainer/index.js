@@ -6,7 +6,7 @@ import styles from './style.module.css'
 const PopularNewsContainers = () => {
     const data = useStaticQuery(graphql`
     query PopularNewsQuery {
-      allContentfulNews(filter: {node_locale: {eq: "en-US"}}) {
+      allContentfulNews(filter: {node_locale: {eq: "en-US"}}, limit: 2) {
         nodes {
           image {
             id
