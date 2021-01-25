@@ -1,0 +1,22 @@
+.section {
+    display: block;
+    justify-content: space-between;
+    margin: 60px auto;
+    width: 90vw;
+    align-items: center;
+}
+
+.containers {
+    display: flex;
+    justify-content: space-between;
+    margin: 60px auto;
+    width: 90vw;
+    height: 230px;
+    align-items: center;
+    background-color: #f3f3f3;
+}
+
+.text {
+    width: 700px;
+
+}
