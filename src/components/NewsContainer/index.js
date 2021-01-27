@@ -35,6 +35,7 @@ const NewsContainers = () => {
    
       return (
           <section className={styles.section}>
+          <p className={styles.news}>News</p>
             {data.allContentfulNews.nodes.map(node => {
               return (
                 <div className={styles.selected}>
