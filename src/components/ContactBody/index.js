@@ -19,7 +19,6 @@ const ContactBody = () => (
     direction="column"
     justify="space-around"
     >
-        <img src={bigPhoto} className={styles.mainPhoto}/>
         <div className={styles.bodyContent}>
         <div className={styles.emailContainer}>
             <h1>E-mail:</h1>
