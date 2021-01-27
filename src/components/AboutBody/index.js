@@ -22,7 +22,6 @@ const AboutBody = () => (
     justify="space-around"
     alignItems="center"
     >
-        <img src={bigPhoto} className={styles.mainPhoto}/>
 
         <div className={styles.container} >
         <h1 className={styles.titlesLeft}>What is G4U ?</h1>
