@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './style.module.css'
 
-const navTabs = ['Home', 'About', 'Games', 'News', 'Contact', 'Dark Mode']
+const navTabs = ['Home', 'Games', 'News', 'Contact', 'About']
 
 const Footer = () => (
   <section>
