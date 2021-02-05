@@ -30,21 +30,23 @@ const PopularGamesContainers = () => {
    
       return (
           <section className={styles.section}>
-            <h1>Popular Games</h1>
-            {data.allContentfulGames.nodes.map(node => {
-              return (
-                <Link to={`/games/${node.slug}`}>
-                  <div className={styles.containers}>
-                    <Img fixed={node.image.fixed}/>
-                    <div className={styles.text}>
-                        <h3>{node.title}</h3>
-                        <h5>{node.console}</h5>
-                        <h4>{node.price}</h4>
+            <p className={styles.games}>Popular Games</p>
+            <div className={styles.cardContainer}>
+              {data.allContentfulGames.nodes.map(node => {
+                return (
+                    <div className={styles.card}>
+                      <Link to={`/games/${node.slug}`}>
+                        <Img fixed={node.image.fixed} className={styles.image}/>
+                        <div className={styles.text}>
+                          <p className={styles.title}>{node.title}</p>
+                          <p className={styles.console}>{node.console}</p>
+                          <p className={styles.price}>{node.price}</p>
+                        </div>
+                      </Link>
                     </div>
-                  </div>
-                </Link>
-              )
-            })}
+                )
+              })}
+            </div>
           </section>
     )
   }
