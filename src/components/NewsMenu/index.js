@@ -11,7 +11,7 @@ const NewsMenu = () => {
             title
             slug
             image {
-              fixed(width: 320, height: 320) {
+              fixed(width: 350, height: 350) {
                 aspectRatio
                 base64
                 height
@@ -28,18 +28,20 @@ const NewsMenu = () => {
    
       return (
           <section className={styles.section}>
-            {data.allContentfulNewsPictures.nodes.map(node => {
-              return (
-                <div className={styles.selected}>
-                  <Link to={`/news/${node.slug}`}>
-                    <div className={styles.containers}>
-                      <Img fixed={node.image.fixed} className={styles.image}/>
-                        <p className={styles.title}>{node.title}</p>
+            <div className={styles.cardContainer}>
+                {data.allContentfulNewsPictures.nodes.map(node => {
+                return (
+                    <div className={styles.card}>
+                        <Link to={`/news/${node.slug}`}>
+                            <Img fixed={node.image.fixed} className={styles.image}/>
+                            <div className={styles.block}>
+                                <p className={styles.text}>{node.title}</p>
+                            </div>
+                        </Link>
                     </div>
-                  </Link>
-                </div>
               )
             })}
+            </div>
           </section>
     )
   }
