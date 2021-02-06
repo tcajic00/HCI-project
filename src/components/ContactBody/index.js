@@ -1,94 +1,50 @@
 import React from 'react'
 
-import phonePhoto from '../../images/phone.jpg'
-
-import emailPhoto from '../../images/email.png'
-
-import addressPhoto from '../../images/location.jpg'
-
-import bigPhoto from '../../images/contactBig1.jpg'
-
-import { Card, CardContent, Grid, Typography} from '@material-ui/core' 
-
+import LocationImage from '../Images/LocationImage'
+import PhoneImage from '../Images/PhoneImage'
+import MailPhoto from '../Images/Mail'
 import styles from './style.module.css'
 
 const ContactBody = () => (
-    <Grid
-    className={styles.body}
-    container
-    direction="column"
-    justify="space-around"
-    >
-        <div className={styles.bodyContent}>
-        <div className={styles.emailContainer}>
-            <h1>E-mail:</h1>
-            <Card 
-            className={styles.card}
-            variant="elevation"
-            >
-                <CardContent
-                    className={styles.cardContent}
-                >
-                    <Typography className={styles.typo} variant="title">
-                        info@g4u.hr
-                    </Typography>
+    <section className={styles.section}>
+        <div className={styles.cardsContainer}>
 
-                    
-                    <img className={styles.img} src={emailPhoto}/>
-                </CardContent>
-                
-            </Card>
-        </div>
+            <p className={styles.cardTitle}>E-mail:</p>
+            <div className={styles.card}>
+                <div className={styles.text}>
+                    <p className={styles.firstText}>info@g4u.hr</p>
+                </div>
+                <div className={styles.image}>
+                    <MailPhoto />
+                </div>
+            </div>
 
-        <div className={styles.phoneContainer}>
-            <h1 className={styles.title}>Phone:</h1>
-            <Card 
-            variant="elevation"
-            className={styles.card}
-            >
-                <CardContent
-                    className={styles.cardContent}
-                >
-                    <img className={styles.img} src={phonePhoto}/>
-                    <Typography className={styles.typo} variant="title">
-                        +385 12 345 6789
-                    </Typography>
-                </CardContent>
-                
-            </Card>
-        </div>
-        
-        <div className={styles.addressContainer}>
-            <h1>Address:</h1>
-        <Card 
-        variant="elevation"
-        className={styles.address}
-        >
-            <CardContent
-                className={styles.addcc}
-            >
-                <Typography className={styles.typo} variant="title">
-                    Head office:
-                    <Typography variant="subtitle1">
-                        Ulica Matice hrvatske 15, Split, Croatia
-                    </Typography>
-                </Typography>
-                <Typography className={styles.typo} variant="title">
-                    Research and development:
-                    <Typography variant="subtitle1">
-                        Metković, Croatia
-                    </Typography>
-                </Typography>
-            </CardContent>
-            <img className={styles.addimg} src={addressPhoto}/>
-        </Card>
-        </div>
+            <p className={styles.cardTitleReverse}>Phone:</p>
+            <div className={styles.cardReverse}>
+                <div className={styles.imageReverse}>
+                    <PhoneImage />
+                </div>
+                <div className={styles.textReverse}>
+                    <p className={styles.firstTextReverse}>+385 12 345 6789</p>
+                </div>
+            </div>
 
-        
-            
+            <p className={styles.cardTitle}>Address:</p>
+            <div className={styles.cardLocation}>
+                <div className={styles.text}>
+                    <p className={styles.firstTextLocation}>Head Office:</p>
+                    <p className={styles.secondTextLocation}>Ulica Matice hrvatske 15, Split, Croatia</p>
+
+                    <p className={styles.firstTextLocation}>Research & Development:</p>
+                    <p className={styles.secondTextLocation}>Metković, Croatia</p>
+                </div>
+                <div className={styles.imageLocation}>
+                    <LocationImage />
+                </div>
+            </div>
+
         </div>
-        
-    </Grid>
+    </section>
 )
 
 export default ContactBody;
