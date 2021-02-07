@@ -6,6 +6,7 @@ import styles from './blog.module.css'
 import NavigationHeader from '../components/NavigationHeader'
 import Footer from '../components/Footer'
 import NewsContainer from '../components/NewsContainer'
+import AboutImage from '../components/Images/AboutImage'
 
 const News = ({ pageContext }) => {
   const { firstImage, secondImage, title, info, firstPharagraph, 
@@ -13,15 +14,28 @@ const News = ({ pageContext }) => {
  
   return (
     <section>
-        <NavigationHeader activeTab = "News & Reviews" />
+        <NavigationHeader activeTab = "News" />
         <main className={styles.container}>
-          <h2>{title}</h2>
-          <h4>{info}</h4>
-          <Img fixed={firstImage.fixed} />
-          <article>{renderRichText(firstPharagraph)}</article>
-          <Img fixed={secondImage.fixed} />
-          <article>{renderRichText(secondPharagraph)}</article>
-          <article>{renderRichText(thirdPharagraph)}</article>
+          <div className={styles.card}>
+
+            <div className={styles.intro}>
+              <p className={styles.title}>{title}</p>
+              <p className={styles.info}>{info}</p>
+            </div>
+
+            <div className={styles.firstPharagraph}>
+              <Img fixed={firstImage.fixed} className={styles.leftImage}/>
+              <p className={styles.rightText}>{renderRichText(firstPharagraph)}</p>
+            </div>
+
+            <div className={styles.secondPharagraph}>
+              <div className={styles.text}>
+                <p className={styles.leftTextFirst}>{renderRichText(secondPharagraph)}</p>
+                <p className={styles.leftTextSecond}>{renderRichText(thirdPharagraph)}</p>
+              </div>
+              <Img fixed={secondImage.fixed} className={styles.rightImage}/>
+            </div>
+          </div>
         </main>
         <NewsContainer/>
         <Footer />
