@@ -30,7 +30,9 @@ const PopularGamesContainers = () => {
    
       return (
           <section className={styles.section}>
-            <p className={styles.games}>Popular Games</p>
+            <div className={styles.popularGamesText}>
+              <p className={styles.games}>Popular Games</p>
+            </div>
             <div className={styles.cardContainer}>
               {data.allContentfulGames.nodes.map(node => {
                 return (

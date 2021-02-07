@@ -1,12 +1,12 @@
 .section {
-    display: block;
+    display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 60px;
-    margin-bottom: 90px;
-    width: 1185px;
+    width: 100%;
     align-items: center;
+    background-color: #e7e7e7;
 }
 
 .games {
@@ -17,6 +17,11 @@
     text-indent: 15px;
 }
 
+.popularGamesText {
+    margin-top: 60px;
+    width: 86%;
+}
+
 .card {
     display: flex;
     flex-direction: column;
@@ -25,14 +30,14 @@
     margin-right: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 6px 2px #888888;
-
-
+    background-color: white;
 }
 
 .cardContainer {
+    margin-bottom: 30px;
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: center;
 }
 
 .image {
