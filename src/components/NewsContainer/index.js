@@ -35,12 +35,14 @@ const NewsContainers = () => {
    
       return (
           <section className={styles.section}>
-          <p className={styles.news}>News</p>
+            <div className={styles.newsText}>
+              <p className={styles.news}>News</p>
+            </div>
             {data.allContentfulNews.nodes.map(node => {
               return (
                 <div className={styles.selected}>
                   <Link to={`/news/${node.slug}`}>
-                    <div className={styles.containers}>
+                    <div className={styles.card}>
                       <Img fixed={node.image.fixed} className={styles.image}/>
                       <div className={styles.text}>
                         <p className={styles.title}>{node.title}</p>
