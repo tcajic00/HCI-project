@@ -5,5 +5,4 @@ export const navs = [
     {tab: 'Contact', to: '/contact'},
     {tab: 'About', to: '/about'}, 
     {tab: 'Cart', to: '/'},
-    {tab: 'Sign In', to: '/'},
 ]

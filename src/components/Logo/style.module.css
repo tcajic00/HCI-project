@@ -6,4 +6,5 @@
   width: 137px;
   background: url("../../images/logo.png") no-repeat center center;
   background-size: cover;
+  justify-self: center;
 }
