@@ -2,8 +2,10 @@ import React, {useState} from 'react'
 import {navigate} from 'gatsby'
 
 import styles from './login.module.css'
-import { Button, TextField } from '@material-ui/core'
+import { Button, createMuiTheme, TextField, ThemeProvider } from '@material-ui/core'
 import Logo from '../components/Logo'
+import {orange} from '@material-ui/core/colors'
+
 
 const users = [
 {
@@ -36,6 +38,10 @@ const LogIn = () => {
         setError('Wrong username or password')
     }, 1500)
   }
+
+  const theme = createMuiTheme({
+      palette : {primary: orange}
+    })
   
   return (
   <main className={styles.background} onKeyDown={key => {
@@ -43,8 +49,9 @@ const LogIn = () => {
       return submit()
   }}>
     <section className={styles.container}>
-        <Logo />
+        <Logo/>
       <TextField 
+        className={styles.input}
         margin="normal"
         variant="outlined"
         name="username"
@@ -53,6 +60,7 @@ const LogIn = () => {
         onChange={e => setUserName(e.target.value)}
       />
       <TextField 
+        className={styles.input}
         margin="normal"
         variant="outlined"
         name="password"
@@ -62,14 +70,19 @@ const LogIn = () => {
         onChange={e=> setPassword(e.target.value)}
       />
       <p className={`${styles[error !== "Success" ? 'error' : 'success']} ${error ? styles.show : ''}`}>{error}</p>
+      <ThemeProvider theme={theme}>
       <Button 
       className={styles.loginButton} 
       onClick={() => submit()}
       variant="contained"
-      color="primary"
+      color = "primary"
       >
         {loading ? 'Loading...' : 'Login'}
       </Button>
+      </ThemeProvider>
+      
+      
+      
     </section>
   </main>
 )}

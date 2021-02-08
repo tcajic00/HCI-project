@@ -8,7 +8,7 @@ import styles from './style.module.css'
 const NavigationHeader = ({ activeTab }) => (
   <section className={styles.navigationHeader}>
       <Navigation />
-      <NavigationBar activeTab={activeTab} />
+      <NavigationBar activeTab={activeTab}/>
   </section>
 )
 
