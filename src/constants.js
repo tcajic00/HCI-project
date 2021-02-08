@@ -4,5 +4,4 @@ export const navs = [
     {tab: 'News', to: '/news'},
     {tab: 'Contact', to: '/contact'},
     {tab: 'About', to: '/about'}, 
-    {tab: 'Cart', to: '/'},
 ]

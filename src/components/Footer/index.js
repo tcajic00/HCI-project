@@ -1,7 +1,8 @@
 import React from 'react'
 import styles from './style.module.css'
+import {Link} from 'gatsby'
 
-const navTabs = ['Home', 'Games', 'News', 'Contact', 'About']
+import {navs as navTabs} from '../../constants' 
 
 const Footer = () => (
   <section>
@@ -13,8 +14,11 @@ const Footer = () => (
         </ul>
         <div>
             <ul className={styles.navigation}>
-                {navTabs.map(tab =>
-                    <li>{tab}</li>)
+                {navTabs.map(({tab, to}) =>
+                <Link to={to}>
+                    <li>{tab}</li>
+                </Link>
+                )
                 }
             </ul>
             <div className={styles.text}>

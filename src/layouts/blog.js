@@ -1,12 +1,10 @@
 import React from 'react'
 import Img from 'gatsby-image'
-import {Link} from 'gatsby'
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import styles from './blog.module.css'
 import NavigationHeader from '../components/NavigationHeader'
 import Footer from '../components/Footer'
 import NewsContainer from '../components/NewsContainer'
-import AboutImage from '../components/Images/AboutImage'
 
 const News = ({ pageContext }) => {
   const { firstImage, secondImage, title, info, firstPharagraph, 
