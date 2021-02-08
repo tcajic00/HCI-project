@@ -3,7 +3,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(31, 31, 31);
+    background-image: url(../images/GameBackground.png);
+    background-attachment: fixed;
 }
 
 .card {
