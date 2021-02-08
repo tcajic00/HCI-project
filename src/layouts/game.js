@@ -4,7 +4,7 @@ import { renderRichText } from "gatsby-source-contentful/rich-text"
 import styles from './game.module.css'
 import NavigationHeader from '../components/NavigationHeader'
 import Footer from '../components/Footer'
-import GamesContainer from '../components/GamesContainer'
+import PopularGamesContainer from '../components/PopularGamesContainer'
 
 const Games = ({ pageContext }) => {
   const { price, title, introduction, mainImage, firstPharagraph, firstImage,
@@ -52,7 +52,7 @@ const Games = ({ pageContext }) => {
 
           </div>
         </main>
-        <GamesContainer />
+        <PopularGamesContainer />
         <Footer />
     </section>
   )
