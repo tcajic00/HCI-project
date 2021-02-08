@@ -1,7 +1,7 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import { renderRichText } from "gatsby-source-contentful/rich-text"
-import styles from './blog.module.css'
+import styles from './game.module.css'
 import NavigationHeader from '../components/NavigationHeader'
 import Footer from '../components/Footer'
 import GamesContainer from '../components/GamesContainer'
@@ -15,20 +15,42 @@ const Games = ({ pageContext }) => {
     <section>
         <NavigationHeader activeTab = "Games" />
         <main className={styles.container}>
-          <h2>{title}</h2>
-          <h4>{price}</h4>
-          <article>{renderRichText(introduction)}</article>
-          <Img fixed={mainImage.fixed} />
-          <article>{renderRichText(firstPharagraph)}</article>
-          <Img fixed={firstImage.fixed} />
-          <Img fixed={secondImage.fixed} />
-          <article>{renderRichText(secondPharagraph)}</article>
-          <article>{renderRichText(thirdPharagraph)}</article>
-          <article>{renderRichText(keyFeatures)}</article>
-          <Img fixed={thirdImage.fixed} />
-          <Img fixed={fourthImage.fixed} />
-          <article>{renderRichText(systemRequirements)}</article>
-          <article>{renderRichText(info)}</article>
+          <div className={styles.card}>
+
+            <div className={styles.firstPharagraph}>
+              <Img fixed={mainImage.fixed} className={styles.mainImage}/>
+              <div className={styles.intro}>
+                <p className={styles.title}>{title}</p>
+                <p className={styles.price}>{price}</p>
+                <p className={styles.introduction}>{renderRichText(introduction)}</p>
+              </div>
+            </div>
+
+            <div className={styles.secondPharagraph}>
+              <p className={styles.firstText}>{renderRichText(firstPharagraph)}</p>
+              <Img fixed={firstImage.fixed} className={styles.firstImage}/>
+            </div>
+
+            <div className={styles.thirdPharagraph}>
+              <Img fixed={secondImage.fixed} className={styles.secondImage}/>
+              <p className={styles.secondText}>{renderRichText(secondPharagraph)}</p>
+            </div>
+
+            <div className={styles.fourthPharagraph}>
+              <div className={styles.textFeatures}>
+                <p className={styles.thirdText}>{renderRichText(thirdPharagraph)}</p>
+                <p className={styles.keyFeatures}>{renderRichText(keyFeatures)}</p>
+                <p className={styles.info}>{renderRichText(info)}</p>
+              </div>
+              <Img fixed={thirdImage.fixed} className={styles.thirdImage}/>
+            </div>
+
+            <div className={styles.fifthPharagraph}>
+              <Img fixed={fourthImage.fixed} className={styles.fourthImage}/>
+              <p className={styles.fourthText}>{renderRichText(systemRequirements)}</p>
+            </div>
+
+          </div>
         </main>
         <GamesContainer />
         <Footer />
