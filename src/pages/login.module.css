@@ -1,5 +1,6 @@
 .background {
-  background-color: gainsboro;
+  background-image: url(../images/GameBackground.png);
+  background-attachment: fixed;
   width: 100vw;
   height: 100vh;
 }
