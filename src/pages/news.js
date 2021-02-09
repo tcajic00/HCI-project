@@ -4,9 +4,10 @@ import NavigationHeader from '../components/NavigationHeader'
 import Footer from '../components/Footer'
 import NewsContainer from '../components/NewsContainer'
 import NewsMenuImage from '../components/Images/NewsMenuImage'
+import styles from './noScrollBar.module.css'
 
 const NewsPage = () => (
-  <main>
+  <main className={styles.container}>
     <NavigationHeader activeTab = "News" />
     <NewsMenuImage />
     <NewsContainer />
