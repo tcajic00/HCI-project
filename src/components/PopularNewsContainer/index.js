@@ -38,22 +38,24 @@ const PopularNewsContainers = () => {
             <div className={styles.popularNewsText}>
               <p className={styles.popularNews}>Popular News</p>
             </div>
+            <div className={styles.cardContainer}>
             {data.allContentfulNews.nodes.map(node => {
               return (
-                <div className={styles.selected}>
+                <div className={styles.card}>
                   <Link to={`/news/${node.slug}`}>
-                    <div className={styles.card}>
-                      <Img fixed={node.image.fixed} className={styles.image}/>
-                      <div className={styles.text}>
-                        <p className={styles.title}>{node.title}</p>
-                        <p className={styles.info}>{node.info}</p>
-                        <div className={styles.pharagraph}>{node.newsContent.internal.content}</div>
-                      </div>
+                  <div className={styles.content}>
+                    <Img fixed={node.image.fixed} className={styles.image}/>
+                    <div className={styles.text}>
+                      <p className={styles.title}>{node.title}</p>
+                      <p className={styles.info}>{node.info}</p>
+                      <div className={styles.pharagraph}>{node.newsContent.internal.content}</div>
+                    </div>
                     </div>
                   </Link>
                 </div>
               )
             })}
+            </div>
           </section>
     )
   }
