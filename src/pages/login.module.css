@@ -1,12 +1,10 @@
 .background {
+  margin-top: 50px;
   background-image: url(../images/GameBackground.png);
   background-attachment: fixed;
   width: 100vw;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: block;
 }
 
 .container {
@@ -61,4 +59,13 @@
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid #C4C4C4;
+}
+
+.logInComponent {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

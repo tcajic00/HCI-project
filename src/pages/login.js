@@ -5,7 +5,8 @@ import styles from './login.module.css'
 import { Button, createMuiTheme, TextField, ThemeProvider } from '@material-ui/core'
 import Logo from '../components/Logo'
 import {orange} from '@material-ui/core/colors'
-
+import Footer from '../components/Footer'
+import NavigationHeader from '../components/NavigationHeader'
 
 const users = [
 {
@@ -48,6 +49,8 @@ const LogIn = () => {
     if (key.key === "Enter")
       return submit()
   }}>
+  <NavigationHeader activeTab={"Log in"}/>
+  <div className={styles.logInComponent}>
     <section className={styles.container}>
       <div className={styles.line}>
         <Logo/>
@@ -86,6 +89,8 @@ const LogIn = () => {
       
       
     </section>
+    </div>
+    <Footer />
   </main>
 )}
 
