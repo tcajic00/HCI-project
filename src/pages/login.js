@@ -2,11 +2,12 @@ import React, {useState} from 'react'
 import {navigate} from 'gatsby'
 
 import styles from './login.module.css'
-import { Button, createMuiTheme, TextField, ThemeProvider } from '@material-ui/core'
+import { Button, createMuiTheme, Snackbar, TextField, ThemeProvider } from '@material-ui/core'
 import Logo from '../components/Logo'
 import {orange} from '@material-ui/core/colors'
 import Footer from '../components/Footer'
 import NavigationHeader from '../components/NavigationHeader'
+import MuiAlert from '@material-ui/lab/Alert'
 
 const users = [
 {
@@ -19,11 +20,24 @@ const users = [
 },
 ]
 
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
+
 const LogIn = () => {
   const [username, setUserName] = useState()
   const [password, setPassword] = useState()
   const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
+
+  const [open, setOpen] = useState(false);
+
+  const handleClose = (reason) => {
+    if(reason === 'clickaway') {
+      return;
+    }
+    setOpen(false);
+  };
 
   const submit = () => {
     setError(false)
@@ -36,6 +50,7 @@ const LogIn = () => {
         setError('Success')
         return navigate('/')
       }
+        setOpen(true);
         setError('Wrong username or password')
     }, 1500)
   }
@@ -74,13 +89,19 @@ const LogIn = () => {
         required
         onChange={e=> setPassword(e.target.value)}
       />
-      <p className={`${styles[error !== "Success" ? 'error' : 'success']} ${error ? styles.show : ''}`}>{error}</p>
+      <text className={styles.reqText}>* required fields</text>
+      <Snackbar open={open} autoHideDuration={4000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="error">
+            {error}
+        </Alert>
+      </Snackbar>
       <ThemeProvider theme={theme}>
         <Button 
-        className={styles.loginButton} 
         onClick={() => submit()}
         variant="contained"
         color = "primary"
+        size='large'
+        m={-2}
         >
           {loading ? 'Loading...' : 'Login'}
         </Button>
