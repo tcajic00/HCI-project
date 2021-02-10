@@ -18,9 +18,9 @@ const NavigationBar = ({ activeTab, useThisStyle }) => {
               <li className={tab === activeTab ? styles.active : ''}>{tab}</li>
           </Link>)
         )}
-        <Link to={'/login'}>
+        <Link to={loggedIn() ? '/' : '/login'}>
           <li onClick={loggedIn() ? () => localStorage.removeItem('loggedIn') : () => {}}>
-            {loggedIn() ? 'Logout' : 'Login'}
+            {loggedIn() ? 'Log out' : 'Log in'}
           </li>
         </Link>
     </nav>

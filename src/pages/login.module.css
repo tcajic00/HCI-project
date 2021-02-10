@@ -3,31 +3,31 @@
   background-attachment: fixed;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-  position: absolute;
   width: 400px;
   height: 400px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   border-radius: 5px;
   box-shadow: 0px 0px 0px 7px #FF8200;
   background-color: white;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   padding: 20px 30px;
-  justify-items: center;
   align-items: center;
 }
 
 .loginButton {
-  width: 50%;
-  background-color: orange;
+  width: 40%;
+  background-color: #FF8200;
 }
 
 .input {
-  width: 70%;
+  width: 80%;
   margin: 0;
 }
 
@@ -50,4 +50,15 @@
 .container .error.show,
 .success.show {
   display: contents;
+}
+
+.line {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 80%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #C4C4C4;
 }

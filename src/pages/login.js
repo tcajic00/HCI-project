@@ -49,7 +49,9 @@ const LogIn = () => {
       return submit()
   }}>
     <section className={styles.container}>
+      <div className={styles.line}>
         <Logo/>
+      </div>
       <TextField 
         className={styles.input}
         margin="normal"
@@ -71,14 +73,14 @@ const LogIn = () => {
       />
       <p className={`${styles[error !== "Success" ? 'error' : 'success']} ${error ? styles.show : ''}`}>{error}</p>
       <ThemeProvider theme={theme}>
-      <Button 
-      className={styles.loginButton} 
-      onClick={() => submit()}
-      variant="contained"
-      color = "primary"
-      >
-        {loading ? 'Loading...' : 'Login'}
-      </Button>
+        <Button 
+        className={styles.loginButton} 
+        onClick={() => submit()}
+        variant="contained"
+        color = "primary"
+        >
+          {loading ? 'Loading...' : 'Login'}
+        </Button>
       </ThemeProvider>
       
       
