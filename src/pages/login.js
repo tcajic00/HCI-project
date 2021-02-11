@@ -72,7 +72,8 @@ const LogIn = () => {
       </div>
       <TextField 
         className={styles.input}
-        margin="normal"
+        error={error}
+        margin="dense"
         variant="outlined"
         name="username"
         label="Username"
@@ -81,7 +82,8 @@ const LogIn = () => {
       />
       <TextField 
         className={styles.input}
-        margin="normal"
+        error={error}
+        margin="dense"
         variant="outlined"
         name="password"
         label="Password"
@@ -89,10 +91,10 @@ const LogIn = () => {
         required
         onChange={e=> setPassword(e.target.value)}
       />
-      <text className={styles.reqText}>* required fields</text>
-      <Snackbar open={open} autoHideDuration={4000} onClose={handleClose}>
-        <Alert onClose={handleClose} severity="error">
-            {error}
+      <text className={styles.reqText}>* Required fields</text>
+      <Snackbar open={open} autoHideDuration={4000} onClose={handleClose} className={styles.errorAlert}>
+        <Alert onClose={handleClose} severity="error" className={styles.errorAlert}>
+            <p className={styles.errorText}>{error}</p>
         </Alert>
       </Snackbar>
       <ThemeProvider theme={theme}>
@@ -103,7 +105,7 @@ const LogIn = () => {
         size='large'
         m={-2}
         >
-          {loading ? 'Loading...' : 'Login'}
+          <p className={styles.buttonText}>{loading ? 'Loading ...' : 'Log in'}</p>
         </Button>
       </ThemeProvider>
       
