@@ -90,6 +90,7 @@ const GamesBody = () => (
 
             <div className={styles.searchFilterBox}>
               <TextField 
+                className={styles.textfield}
                 margin="dense"
                 variant="outlined"
                 name="From"
@@ -97,6 +98,7 @@ const GamesBody = () => (
               />
               <p className={styles.priceSeparator}>-</p>
               <TextField
+                className={styles.textfield}
                 margin="dense"
                 variant="outlined"
                 name="To"
