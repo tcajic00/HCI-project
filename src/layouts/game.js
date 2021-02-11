@@ -22,6 +22,11 @@ const Games = ({ pageContext }) => {
               <div className={styles.intro}>
                 <p className={styles.title}>{title}</p>
                 <p className={styles.price}>{price}</p>
+                <div className={styles.buttonContainer}>
+                  <div className={styles.button}>
+                    <p className={styles.buttonText}>Buy</p>
+                  </div>
+                </div>
                 <p className={styles.introduction}>{renderRichText(introduction)}</p>
               </div>
             </div>
