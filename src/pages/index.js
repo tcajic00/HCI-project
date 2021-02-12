@@ -6,10 +6,12 @@ import HomeImage from '../components/Images/Home'
 import PopularGamesContainer from '../components/PopularGamesContainer'
 import PopularNewsContainer from '../components/PopularNewsContainer'
 import styles from './noScrollBar.module.css'
+import {TitleComponent} from '../components/Title'
 
 const IndexPage = () => {
   return(
   <main className={styles.container}>
+    <TitleComponent title="Home" />
     <NavigationHeader activeTab = "Home"/>
     <HomeImage />
     <PopularGamesContainer />

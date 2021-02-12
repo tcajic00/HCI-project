@@ -5,6 +5,7 @@ import styles from './game.module.css'
 import NavigationHeader from '../components/NavigationHeader'
 import Footer from '../components/Footer'
 import PopularGamesContainer from '../components/PopularGamesContainer'
+import {TitleComponent} from '../components/Title'
 
 const Games = ({ pageContext }) => {
   const { price, title, introduction, mainImage, firstPharagraph, firstImage,
@@ -13,6 +14,7 @@ const Games = ({ pageContext }) => {
  
   return (
     <section>
+        <TitleComponent title={title} />
         <NavigationHeader activeTab = "Games" />
         <main className={styles.container}>
           <div className={styles.card}>

@@ -5,6 +5,7 @@ import styles from './blog.module.css'
 import NavigationHeader from '../components/NavigationHeader'
 import Footer from '../components/Footer'
 import NewsContainer from '../components/NewsContainer'
+import {TitleComponent} from '../components/Title'
 
 const News = ({ pageContext }) => {
   const { firstImage, secondImage, title, info, firstPharagraph, 
@@ -12,6 +13,7 @@ const News = ({ pageContext }) => {
  
   return (
     <section>
+        <TitleComponent title={title} />
         <NavigationHeader activeTab = "News" />
         <main className={styles.container}>
           <div className={styles.card}>

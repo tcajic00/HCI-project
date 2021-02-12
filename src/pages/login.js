@@ -8,6 +8,7 @@ import {orange} from '@material-ui/core/colors'
 import Footer from '../components/Footer'
 import NavigationHeader from '../components/NavigationHeader'
 import MuiAlert from '@material-ui/lab/Alert'
+import {TitleComponent} from '../components/Title'
 
 const users = [
 {
@@ -64,6 +65,7 @@ const LogIn = () => {
     if (key.key === "Enter")
       return submit()
   }}>
+  <TitleComponent title="Log in" />
   <NavigationHeader activeTab={"Log in"}/>
   <div className={styles.logInComponent}>
     <section className={styles.container}>
