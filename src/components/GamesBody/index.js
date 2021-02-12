@@ -3,6 +3,11 @@ import styles from './style.module.css'
 import GamesContainer from '../GamesContainer'
 import { TextField } from '@material-ui/core'
 
+const categoryFilters = ['Indie', 'Action', 'Adventure', 'Strategy', 'Simulator', 
+                        'RPG', 'Arcade', 'Sports', 'Racing', 'Puzzle', 'Fighting']
+
+const consoleFilters = ['PC', 'PS2', 'PS3', 'PS4', 'PS5', 'XBox']
+
 const GamesBody = () => (
   <section className={styles.section}>
     <div className={styles.titleContainer}>
@@ -21,65 +26,13 @@ const GamesBody = () => (
           </div>
 
           <div className={styles.categoriesBox}>
-            <div className={styles.category}>
-              <p className={styles.categoryText}>Indie</p>
-              <p className={styles.categoryNumber}>10</p>
-            </div>
-
-            <div className={styles.category}>
-              <p className={styles.categoryText}>Action</p>
-              <p className={styles.categoryNumber}>10</p>
-            </div>
-
-            <div className={styles.category}>
-              <p className={styles.categoryText}>Adventure</p>
-              <p className={styles.categoryNumber}>10</p>
-            </div>
-
-            <div className={styles.category}>
-              <p className={styles.categoryText}>Strategy</p>
-              <p className={styles.categoryNumber}>10</p>
-            </div>
-
-            <div className={styles.category}>
-              <p className={styles.categoryText}>Simulator</p>
-              <p className={styles.categoryNumber}>10</p>
-            </div>
-
-            <div className={styles.category}>
-              <p className={styles.categoryText}>Indie</p>
-              <p className={styles.categoryNumber}>10</p>
-            </div>
-
-            <div className={styles.category}>
-              <p className={styles.categoryText}>RPG</p>
-              <p className={styles.categoryNumber}>10</p>
-            </div>
-
-            <div className={styles.category}>
-              <p className={styles.categoryText}>Arcade</p>
-              <p className={styles.categoryNumber}>10</p>
-            </div>
-
-            <div className={styles.category}>
-              <p className={styles.categoryText}>Sports</p>
-              <p className={styles.categoryNumber}>10</p>
-            </div>
-
-            <div className={styles.category}>
-              <p className={styles.categoryText}>Racing</p>
-              <p className={styles.categoryNumber}>10</p>
-            </div>
-
-            <div className={styles.category}>
-              <p className={styles.categoryText}>Puzzle</p>
-              <p className={styles.categoryNumber}>10</p>
-            </div>
-
-            <div className={styles.category}>
-              <p className={styles.categoryText}>Fighting</p>
-              <p className={styles.categoryNumber}>10</p>
-            </div>
+              {categoryFilters.map(category => (
+                <div className={styles.category}>
+                  <p className={styles.categoryText}>{category}</p>
+                  <p className={styles.categoryNumber}>10</p>
+                </div>
+              )
+              )}
           </div>
 
           <div className={styles.searchFilterContainer}>
@@ -112,36 +65,13 @@ const GamesBody = () => (
           </div>
 
           <div className={styles.categoriesBox}>
-            <div className={styles.category}>
-              <p className={styles.categoryText}>PC</p>
-              <p className={styles.categoryNumber}>10</p>
-            </div>
-
-            <div className={styles.category}>
-              <p className={styles.categoryText}>PS2</p>
-              <p className={styles.categoryNumber}>10</p>
-            </div>
-
-            <div className={styles.category}>
-              <p className={styles.categoryText}>PS3</p>
-              <p className={styles.categoryNumber}>10</p>
-            </div>
-
-            <div className={styles.category}>
-              <p className={styles.categoryText}>PS4</p>
-              <p className={styles.categoryNumber}>10</p>
-            </div>
-
-            <div className={styles.category}>
-              <p className={styles.categoryText}>PS5</p>
-              <p className={styles.categoryNumber}>10</p>
-            </div>
-
-            <div className={styles.category}>
-              <p className={styles.categoryText}>XBox</p>
-              <p className={styles.categoryNumber}>10</p>
-            </div>
-
+              {consoleFilters.map(console => (
+                <div className={styles.category}>
+                  <p className={styles.categoryText}>{console}</p>
+                  <p className={styles.categoryNumber}>10</p>
+                </div>
+              )
+              )}
           </div>
 
         </div>
