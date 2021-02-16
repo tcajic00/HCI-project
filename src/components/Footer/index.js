@@ -9,7 +9,9 @@ const Footer = () => (
     <footer className={styles.footer}>
         <ul className={styles.container}>
             <div className={styles.div}>
-                <div className={styles.logo}></div>
+                <Link to='/' style={{textDecoration: 'none'}}>
+                    <div className={styles.logo}></div>
+                </Link>
             </div>
         </ul>
         <div>
