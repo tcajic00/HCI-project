@@ -1,7 +1,79 @@
-.titleImage {
-    height: 450px;
-    width: 100%;
-    position: relative;
-    box-shadow: 0px 3px 6px 0px #888888;
-    margin-top: 80px;
+@media only screen and (max-width: 300px) {
+    .titleImage {
+        height: 190px;
+        width: 100%;
+        position: relative;
+        box-shadow: 0px 3px 6px 0px #888888;
+        margin-top: 80px;
+    }
+}
+
+@media only screen and (min-width: 300px) {
+    .titleImage {
+        height: 210px;
+        width: 100%;
+        position: relative;
+        box-shadow: 0px 3px 6px 0px #888888;
+        margin-top: 80px;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .titleImage {
+        height: 250px;
+        width: 100%;
+        position: relative;
+        box-shadow: 0px 3px 6px 0px #888888;
+        margin-top: 80px;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .titleImage {
+        height: 300px;
+        width: 100%;
+        position: relative;
+        box-shadow: 0px 3px 6px 0px #888888;
+        margin-top: 80px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .titleImage {
+        height: 350px;
+        width: 100%;
+        position: relative;
+        box-shadow: 0px 3px 6px 0px #888888;
+        margin-top: 80px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .titleImage {
+        height: 400px;
+        max-width: 100%;
+        position: relative;
+        box-shadow: 0px 3px 6px 0px #888888;
+        margin-top: 80px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .titleImage {
+        height: 430px;
+        width: 100%;
+        position: relative;
+        box-shadow: 0px 3px 6px 0px #888888;
+        margin-top: 80px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .titleImage {
+        height: 450px;
+        width: 100%;
+        position: relative;
+        box-shadow: 0px 3px 6px 0px #888888;
+        margin-top: 80px;
+    }
 }
