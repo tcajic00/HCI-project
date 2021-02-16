@@ -26,12 +26,14 @@ function Alert(props) {
 }
 
 const LogIn = () => {
-  const [username, setUserName] = useState()
-  const [password, setPassword] = useState()
+  const [username, setUserName] = useState('')
+  const [password, setPassword] = useState('')
   const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
 
   const [open, setOpen] = useState(false);
+
+  const enabled = username.length > 0 && password.length > 0;
 
   const handleClose = (reason) => {
     if(reason === 'clickaway') {
@@ -101,6 +103,7 @@ const LogIn = () => {
       </Snackbar>
       <ThemeProvider theme={theme}>
         <Button 
+        disabled = {!enabled}
         onClick={() => submit()}
         variant="contained"
         color = "primary"
