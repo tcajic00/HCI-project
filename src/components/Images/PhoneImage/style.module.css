@@ -1,5 +1,31 @@
-.titleImage {
-    height: 190px;
-    width: 190px;
-    position: relative;
+@media only screen and (max-width: 300px) {
+    .titleImage {
+        height: 130px;
+        width: 130px;
+        position: relative;
+    }
+}
+
+@media only screen and (min-width: 300px) {
+    .titleImage {
+        height: 130px;
+        width: 130px;
+        position: relative;
+    }
+}
+
+@media only screen and (min-width: 420px) {
+    .titleImage {
+        height: 130px;
+        width: 130px;
+        position: relative;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .titleImage {
+        height: 190px;
+        width: 190px;
+        position: relative;
+    }
 }
