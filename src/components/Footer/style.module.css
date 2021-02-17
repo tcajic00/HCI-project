@@ -256,7 +256,7 @@
 @media only screen and (min-width: 768px){
     .logo {
         margin-top: 0px;
-        margin-left: 40px;
+        margin-left: 20px;
         display: flex;
         height: 100px;
         width: 270px;
@@ -293,7 +293,6 @@
         margin-top: 0px;
         list-style: none;
         display: flex;
-        height: 45px;
         width: 570px;
         padding-top: 20px;
     }
@@ -369,7 +368,14 @@
         background-color: #212121;
     }
 
+    .informations {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
     .navigation {
+        flex-direction: row;
         margin-top: 0px;
         margin-left: 0px;
         list-style: none;
