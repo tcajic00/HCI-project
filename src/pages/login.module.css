@@ -1,105 +1,653 @@
-.background {
-  margin-top: 50px;
-  background-image: url(../images/GameBackground.png);
-  background-attachment: fixed;
-  width: 100vw;
-  height: 100vh;
-  display: block;
+@media only screen and (max-width: 300px) {
+  .background {
+    margin-top: 50px;
+    background-image: url(../images/GameBackground.png);
+    background-attachment: fixed;
+    width: 100%;
+    display: block;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 7px #ff8200;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    align-items: center;
+  }
+
+  .reqText {
+    width: 80%;
+    font-weight: 500;
+    color: rgb(100, 100, 100);
+    padding: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+  }
+
+  .container > button {
+    margin: auto;
+    width: 50%;
+    height: 70px;
+  }
+
+  .input {
+    width: 80%;
+    margin: 0;
+  }
+
+  .error {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    display: none;
+    color: red;
+    margin: 20px auto;
+    margin-top: 0;
+  }
+
+  .success {
+    opacity: 0;
+    color: greenyellow;
+    margin: 20px auto;
+    margin-top: 0;
+  }
+
+  .container .error.show,
+  .success.show {
+    display: contents;
+  }
+
+  .line {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #c4c4c4;
+  }
+
+  .logInComponent {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .errorAlert {
+    align-items: center;
+    height: 50px;
+    width: 99%;
+  }
+
+  .errorText {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .buttonText {
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: lowercase;
+  }
+
+  p::first-letter {
+    text-transform: uppercase;
+  }
 }
 
-.container {
-  width: 400px;
-  height: 400px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 0px 7px #ff8200;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 20px 30px;
-  align-items: center;
+@media only screen and (min-width: 300px) {
+  .background {
+    margin-top: 50px;
+    background-image: url(../images/GameBackground.png);
+    background-attachment: fixed;
+    width: 100%;
+    display: block;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 270px;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 7px #ff8200;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    align-items: center;
+  }
+
+  .reqText {
+    width: 70%;
+    font-weight: 500;
+    color: rgb(100, 100, 100);
+    padding: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+  }
+
+  .container > button {
+    margin: auto;
+    width: 60%;
+    height: 60px;
+  }
+
+  .input {
+    width: 80%;
+    margin: 0;
+  }
+
+  .error {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    display: none;
+    color: red;
+    margin: 20px auto;
+    margin-top: 0;
+  }
+
+  .success {
+    opacity: 0;
+    color: greenyellow;
+    margin: 20px auto;
+    margin-top: 0;
+  }
+
+  .container .error.show,
+  .success.show {
+    display: contents;
+  }
+
+  .line {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #c4c4c4;
+  }
+
+  .logInComponent {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .errorAlert {
+    align-items: center;
+    height: 50px;
+    width: 99%;
+  }
+
+  .errorText {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .buttonText {
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    text-transform: lowercase;
+  }
+
+  p::first-letter {
+    text-transform: uppercase;
+  }
 }
 
-.reqText {
-  width: 80%;
-  font-weight: 500;
-  color: rgb(100, 100, 100);
-  padding: 10px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: medium;
+@media only screen and (min-width: 420px) {
+  .background {
+    margin-top: 50px;
+    background-image: url(../images/GameBackground.png);
+    background-attachment: fixed;
+    width: 100%;
+    display: block;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 7px #ff8200;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    align-items: center;
+  }
+
+  .reqText {
+    width: 70%;
+    font-weight: 500;
+    color: rgb(100, 100, 100);
+    padding: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+  }
+
+  .container > button {
+    margin: auto;
+    width: 60%;
+    height: 60px;
+  }
+
+  .input {
+    width: 80%;
+    margin: 0;
+  }
+
+  .error {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    display: none;
+    color: red;
+    margin: 20px auto;
+    margin-top: 0;
+  }
+
+  .success {
+    opacity: 0;
+    color: greenyellow;
+    margin: 20px auto;
+    margin-top: 0;
+  }
+
+  .container .error.show,
+  .success.show {
+    display: contents;
+  }
+
+  .line {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #c4c4c4;
+  }
+
+  .logInComponent {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .errorAlert {
+    align-items: center;
+    height: 50px;
+    width: 99%;
+  }
+
+  .errorText {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .buttonText {
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    text-transform: lowercase;
+  }
+
+  p::first-letter {
+    text-transform: uppercase;
+  }
 }
 
-.container > button {
-  margin: auto;
-  width: 50%;
-  height: 70px;
+@media only screen and (min-width: 768px) {
+  .background {
+    margin-top: 80px;
+    background-image: url(../images/GameBackground.png);
+    background-attachment: fixed;
+    width: 100%;
+    display: block;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 7px #ff8200;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    align-items: center;
+  }
+
+  .reqText {
+    width: 80%;
+    font-weight: 500;
+    color: rgb(100, 100, 100);
+    padding: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+  }
+
+  .container > button {
+    margin: auto;
+    width: 50%;
+    height: 70px;
+  }
+
+  .input {
+    width: 80%;
+    margin: 0;
+  }
+
+  .error {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    display: none;
+    color: red;
+    margin: 20px auto;
+    margin-top: 0;
+  }
+
+  .success {
+    opacity: 0;
+    color: greenyellow;
+    margin: 20px auto;
+    margin-top: 0;
+  }
+
+  .container .error.show,
+  .success.show {
+    display: contents;
+  }
+
+  .line {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #c4c4c4;
+  }
+
+  .logInComponent {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .errorAlert {
+    align-items: center;
+    height: 50px;
+    width: 99%;
+  }
+
+  .errorText {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .buttonText {
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: lowercase;
+  }
+
+  p::first-letter {
+    text-transform: uppercase;
+  }
 }
 
-.input {
-  width: 80%;
-  margin: 0;
+@media only screen and (min-width: 922px) {
+  .background {
+    margin-top: 80px;
+    background-image: url(../images/GameBackground.png);
+    background-attachment: fixed;
+    width: 100%;
+    display: block;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 7px #ff8200;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    align-items: center;
+  }
+
+  .reqText {
+    width: 80%;
+    font-weight: 500;
+    color: rgb(100, 100, 100);
+    padding: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+  }
+
+  .container > button {
+    margin: auto;
+    width: 50%;
+    height: 70px;
+  }
+
+  .input {
+    width: 80%;
+    margin: 0;
+  }
+
+  .error {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    display: none;
+    color: red;
+    margin: 20px auto;
+    margin-top: 0;
+  }
+
+  .success {
+    opacity: 0;
+    color: greenyellow;
+    margin: 20px auto;
+    margin-top: 0;
+  }
+
+  .container .error.show,
+  .success.show {
+    display: contents;
+  }
+
+  .line {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #c4c4c4;
+  }
+
+  .logInComponent {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .errorAlert {
+    align-items: center;
+    height: 50px;
+    width: 99%;
+  }
+
+  .errorText {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .buttonText {
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: lowercase;
+  }
+
+  p::first-letter {
+    text-transform: uppercase;
+  }
 }
 
-.error {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  display: none;
-  color: red;
-  margin: 20px auto;
-  margin-top: 0;
-}
+@media only screen and (min-width: 1200px) {
+  .background {
+    margin-top: 50px;
+    background-image: url(../images/GameBackground.png);
+    background-attachment: fixed;
+    width: 100%;
+    display: block;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 
-.success {
-  opacity: 0;
-  color: greenyellow;
-  margin: 20px auto;
-  margin-top: 0;
-}
+  .container {
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 7px #ff8200;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    align-items: center;
+  }
 
-.container .error.show,
-.success.show {
-  display: contents;
-}
+  .reqText {
+    width: 80%;
+    font-weight: 500;
+    color: rgb(100, 100, 100);
+    padding: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+  }
 
-.line {
-  margin-top: 30px;
-  margin-bottom: 25px;
-  width: 80%;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 1px solid #c4c4c4;
-}
+  .container > button {
+    margin: auto;
+    width: 50%;
+    height: 70px;
+  }
 
-.logInComponent {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+  .input {
+    width: 80%;
+    margin: 0;
+  }
 
-.errorAlert {
-  align-items: center;
-  height: 50px;
-  width: 99%;
-}
+  .error {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    display: none;
+    color: red;
+    margin: 20px auto;
+    margin-top: 0;
+  }
 
-.errorText {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 17px;
-  font-weight: 500;
-}
+  .success {
+    opacity: 0;
+    color: greenyellow;
+    margin: 20px auto;
+    margin-top: 0;
+  }
 
-.buttonText {
-  color: #ffffff;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 30px;
-  font-weight: 600;
-  text-transform: lowercase;
-}
+  .container .error.show,
+  .success.show {
+    display: contents;
+  }
 
-p::first-letter {
-  text-transform: uppercase;
+  .line {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #c4c4c4;
+  }
+
+  .logInComponent {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .errorAlert {
+    align-items: center;
+    height: 50px;
+    width: 99%;
+  }
+
+  .errorText {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .buttonText {
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: lowercase;
+  }
+
+  p::first-letter {
+    text-transform: uppercase;
+  }
 }
