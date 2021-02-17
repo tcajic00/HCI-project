@@ -14,7 +14,7 @@ const Footer = () => (
                 </Link>
             </div>
         </ul>
-        <div>
+        <div className={styles.informations}>
             <ul className={styles.navigation}>
                 {navTabs.map(({tab, to}) =>
                 <Link to={to}>
