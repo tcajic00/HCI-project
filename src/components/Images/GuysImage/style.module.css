@@ -1,7 +1,47 @@
 .titleImage {
-    height: 310px;
-    width: 540px;
     position: relative;
     border-radius: 5px;
     box-shadow: 0px 0px 6px 2px #888888;
+}
+
+@media only screen and (max-width: 300px){
+    .titleImage {
+        height: 160px;
+        width: 240px;
+    }
+}
+
+@media only screen and (min-width: 300px){
+    .titleImage {
+        height: 160px;
+        width: 240px;
+    }
+}
+
+@media only screen and (min-width: 420px){
+    .titleImage {
+        height: 160px;
+        width: 240px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .titleImage {
+        height: 160px;
+        width: 240px;
+    }
+}
+
+@media only screen and (min-width: 922px){
+    .titleImage {
+        height: 250px;
+        width: 360px;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .titleImage {
+        height: 310px;
+        width: 540px;
+    }
 }
