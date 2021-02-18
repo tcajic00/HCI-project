@@ -13,15 +13,13 @@ const PopularGamesContainers = () => {
             price
             console
             image {
-              fixed(height: 215, width: 251) {
+              fluid(maxWidth: 251) {
                 aspectRatio
                 base64
-                height
                 src
                 srcSet
                 srcSetWebp
                 srcWebp
-                width
               }
             }
           }
@@ -38,7 +36,7 @@ const PopularGamesContainers = () => {
                 return (
                     <div className={styles.card}>
                       <Link to={`/games/${node.slug}`}>
-                        <Img fixed={node.image.fixed} className={styles.image}/>
+                        <Img fluid={node.image.fluid} className={styles.image}/>
                         <div className={styles.text}>
                           <p className={styles.title}>{node.title}</p>
                           <p className={styles.console}>{node.console}</p>
