@@ -11,15 +11,13 @@ const NewsMenu = () => {
             title
             slug
             image {
-              fixed(width: 350, height: 350) {
+              fluid(maxWidth: 350) {
                 aspectRatio
                 base64
-                height
                 src
                 srcSet
                 srcSetWebp
                 srcWebp
-                width
               }
             }
           }
@@ -33,7 +31,7 @@ const NewsMenu = () => {
                 return (
                     <div className={styles.card}>
                         <Link to={`/news/${node.slug}`}>
-                            <Img fixed={node.image.fixed} className={styles.image}/>
+                            <Img fluid={node.image.fluid} className={styles.image}/>
                             <div className={styles.block}>
                                 <p className={styles.text}>{node.title}</p>
                             </div>
