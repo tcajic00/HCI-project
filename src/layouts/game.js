@@ -6,6 +6,7 @@ import NavigationHeader from '../components/NavigationHeader'
 import Footer from '../components/Footer'
 import PopularGamesContainer from '../components/PopularGamesContainer'
 import {TitleComponent} from '../components/Title'
+import style from '../pages/noScrollBar.module.css'
 
 const Games = ({ pageContext }) => {
   const { price, title, introduction, mainImage, firstPharagraph, firstImage,
@@ -13,7 +14,7 @@ const Games = ({ pageContext }) => {
     fourthImage, systemRequirements, info } = pageContext
  
   return (
-    <section>
+    <section className={style.container}>
         <TitleComponent title={title} />
         <NavigationHeader activeTab = "Games" />
         <main className={styles.container}>
