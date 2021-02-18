@@ -20,7 +20,7 @@ const Games = ({ pageContext }) => {
           <div className={styles.card}>
 
             <div className={styles.firstPharagraph}>
-              <Img fixed={mainImage.fixed} className={styles.mainImage}/>
+              <Img fluid={mainImage.fluid} className={styles.mainImage}/>
               <div className={styles.intro}>
                 <p className={styles.title}>{title}</p>
                 <p className={styles.price}>{price}</p>
@@ -35,11 +35,11 @@ const Games = ({ pageContext }) => {
 
             <div className={styles.secondPharagraph}>
               <p className={styles.firstText}>{renderRichText(firstPharagraph)}</p>
-              <Img fixed={firstImage.fixed} className={styles.firstImage}/>
+              <Img fluid={firstImage.fluid} className={styles.firstImage}/>
             </div>
 
             <div className={styles.thirdPharagraph}>
-              <Img fixed={secondImage.fixed} className={styles.secondImage}/>
+              <Img fluid={secondImage.fluid} className={styles.secondImage}/>
               <p className={styles.secondText}>{renderRichText(secondPharagraph)}</p>
             </div>
 
@@ -49,11 +49,11 @@ const Games = ({ pageContext }) => {
                 <p className={styles.keyFeatures}>{renderRichText(keyFeatures)}</p>
                 <p className={styles.info}>{renderRichText(info)}</p>
               </div>
-              <Img fixed={thirdImage.fixed} className={styles.thirdImage}/>
+              <Img fluid={thirdImage.fluid} className={styles.thirdImage}/>
             </div>
 
             <div className={styles.fifthPharagraph}>
-              <Img fixed={fourthImage.fixed} className={styles.fourthImage}/>
+              <Img fluid={fourthImage.fluid} className={styles.fourthImage}/>
               <p className={styles.fourthText}>{renderRichText(systemRequirements)}</p>
             </div>
 

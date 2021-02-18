@@ -18,27 +18,23 @@ exports.createPages = async ({ graphql, actions }) => {
             raw
           }
           firstImage {
-            fixed(width: 550, height: 380) {
+            fluid(maxWidth: 550) {
               aspectRatio
               base64
-              height
               src
               srcSet
               srcSetWebp
               srcWebp
-              width
             }
           }
           secondImage {
-            fixed(width: 500, height: 300) {
+            fluid(maxWidth: 500) {
               aspectRatio
               base64
-              height
               src
               srcSet
               srcSetWebp
               srcWebp
-              width
             }
           }
         }
@@ -71,63 +67,53 @@ exports.createPages = async ({ graphql, actions }) => {
             raw
           }
           thirdImage {
-            fixed(height: 281, width: 550) {
+            fluid(maxWidth: 550) {
               aspectRatio
               base64
-              height
               src
               srcSet
               srcSetWebp
               srcWebp
-              width
             }
           }
           secondImage {
-            fixed(height: 281, width: 550) {
+            fluid(maxWidth: 550) {
               aspectRatio
               base64
-              height
               src
               srcSet
               srcSetWebp
               srcWebp
-              width
             }
           }
           mainImage {
-            fixed(height: 337, width: 500) {
+            fluid(maxWidth: 500) {
               aspectRatio
               base64
-              height
               src
               srcSet
               srcSetWebp
               srcWebp
-              width
             }
           }
           fourthImage {
-            fixed(height: 281, width: 550) {
+            fluid(maxWidth: 550) {
               aspectRatio
               base64
-              height
               src
               srcSetWebp
               srcWebp
-              width
               srcSet
             }
           }
           firstImage {
-            fixed(width: 550, height: 281) {
+            fluid(maxWidth: 550) {
               aspectRatio
               base64
-              height
               src
               srcSet
               srcSetWebp
               srcWebp
-              width
             }
           }
         }
