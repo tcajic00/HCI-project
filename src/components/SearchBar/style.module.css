@@ -1,4 +1,20 @@
-.searchBar {
-    border-radius: 3px;
-    background-color: #f5f5f5;
+@media only screen and (max-width: 300px) {
+    .searchBar {
+        border-radius: 3px;
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 300px) {
+    .searchBar {
+        border-radius: 3px;
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .searchBar {
+        border-radius: 3px;
+        display: flex;
+    }
 }
