@@ -1,189 +1,1175 @@
-.section {
-    margin-top: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    background-image: url(../../images/GameBackground.png);
-    background-attachment: fixed;
+@media only screen and (max-width: 300px) {
+    .section {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        background-image: url(../../images/GameBackground.png);
+        background-attachment: fixed;
+    }
+
+    .titleContainer {
+        margin-top: 120px;
+        margin-bottom: 40px;
+        width: 77%;
+        justify-content: flex-start;
+    }
+
+    .title {
+        font-size: 36px;
+        font-weight: 600;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #ffffff;
+    }
+
+    .bodyContainer {
+        margin-top: 70px;
+        margin-bottom: 80px;
+        width: 95%;
+        background-color: #e7e7e7;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0px 0px 6px 3px #a0a0a0;
+    }
+
+    .gamesTitle {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: #2E2E2E;
+    }
+
+    .gamesTitleText {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 40px;
+        font-weight: 600;
+        text-indent: 55px;
+    }
+
+    .gamesBody {
+        margin-bottom: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .gamesContainer {
+        width: 970px;
+    }
+
+    .filterBox {
+        width: 350px;
+        justify-content: center;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .categoriesTextBox {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgb(185, 185, 185);
+        width: 300px;
+        justify-content: flex-start;
+        display: flex;
+    }
+
+    .categoriesText {
+        color: #2E2E2E;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 21px;
+        font-weight: 600;
+        text-indent: 35px;
+    }
+
+    .categoriesBox {
+        width: 230px;
+    }
+
+    .category {
+        margin-bottom: 7px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 230px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+
+    .categoryText {
+        padding-left: 10px;
+        color: #2E2E2E;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 19px;
+        font-weight: 400;
+        pointer-events: none;
+    }
+
+    .categoryNumber {
+        padding-right: 10px;
+        color: #5e5e5e;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        pointer-events: none;
+    }
+
+    .searchFilterContainer {
+        margin-top: 15px;
+        margin-bottom: 30px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .priceTextBox {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        padding-top: 40px;
+        width: 300px;
+        justify-content: flex-start;
+        display: flex;
+        border-bottom: 1px solid rgb(185, 185, 185);
+    }
+
+    .priceText {
+        color: #2E2E2E;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 21px;
+        font-weight: 600;
+        text-indent: 35px;
+    }
+
+    .euroText {
+        color: #696969;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        text-indent: 3px;
+    }
+
+    .priceSeparator {
+        margin-left: 10px;
+        margin-right: 10px;
+        color: #696969;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 21px;
+        font-weight: 600;
+    }
+
+    .searchFilterBox {
+        margin-bottom: 15px;
+        width: 250px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .textfield {
+        background-color: #f7f7f7;
+        border-radius: 3px;
+    }
+
+    .categoriesBox :hover {
+        background-color: #ff8400bd;
+    }
 }
 
-.titleContainer {
-    margin-top: 120px;
-    margin-bottom: 40px;
-    width: 77%;
-    justify-content: flex-start;
+@media only screen and (min-width: 300px) {
+    .section {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        background-image: url(../../images/GameBackground.png);
+        background-attachment: fixed;
+    }
+
+    .titleContainer {
+        margin-top: 120px;
+        margin-bottom: 40px;
+        width: 77%;
+        justify-content: flex-start;
+    }
+
+    .title {
+        font-size: 34px;
+        font-weight: 600;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #ffffff;
+    }
+
+    .bodyContainer {
+        margin-top: 70px;
+        margin-bottom: 80px;
+        width: 95%;
+        background-color: #e7e7e7;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0px 0px 6px 3px #a0a0a0;
+    }
+
+    .gamesTitle {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: #2E2E2E;
+    }
+
+    .gamesTitleText {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 40px;
+        font-weight: 600;
+        text-indent: 55px;
+    }
+
+    .gamesBody {
+        margin-bottom: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .gamesContainer {
+        width: 970px;
+    }
+
+    .filterBox {
+        width: 350px;
+        justify-content: center;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .categoriesTextBox {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgb(185, 185, 185);
+        width: 300px;
+        justify-content: flex-start;
+        display: flex;
+    }
+
+    .categoriesText {
+        color: #2E2E2E;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 21px;
+        font-weight: 600;
+        text-indent: 35px;
+    }
+
+    .categoriesBox {
+        width: 230px;
+    }
+
+    .category {
+        margin-bottom: 7px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 230px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+
+    .categoryText {
+        padding-left: 10px;
+        color: #2E2E2E;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 19px;
+        font-weight: 400;
+        pointer-events: none;
+    }
+
+    .categoryNumber {
+        padding-right: 10px;
+        color: #5e5e5e;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        pointer-events: none;
+    }
+
+    .searchFilterContainer {
+        margin-top: 15px;
+        margin-bottom: 30px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .priceTextBox {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        padding-top: 40px;
+        width: 300px;
+        justify-content: flex-start;
+        display: flex;
+        border-bottom: 1px solid rgb(185, 185, 185);
+    }
+
+    .priceText {
+        color: #2E2E2E;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 21px;
+        font-weight: 600;
+        text-indent: 35px;
+    }
+
+    .euroText {
+        color: #696969;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        text-indent: 3px;
+    }
+
+    .priceSeparator {
+        margin-left: 10px;
+        margin-right: 10px;
+        color: #696969;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 21px;
+        font-weight: 600;
+    }
+
+    .searchFilterBox {
+        margin-bottom: 15px;
+        width: 250px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .textfield {
+        background-color: #f7f7f7;
+        border-radius: 3px;
+    }
+
+    .categoriesBox :hover {
+        background-color: #ff8400bd;
+    }
 }
 
-.title {
-    font-size: 36px;
-    font-weight: 600;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #ffffff;
+@media only screen and (min-width: 420px) {
+    .section {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        background-image: url(../../images/GameBackground.png);
+        background-attachment: fixed;
+    }
+
+    .titleContainer {
+        margin-top: 120px;
+        margin-bottom: 40px;
+        width: 77%;
+        justify-content: flex-start;
+    }
+
+    .title {
+        font-size: 36px;
+        font-weight: 600;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #ffffff;
+    }
+
+    .bodyContainer {
+        margin-top: 70px;
+        margin-bottom: 80px;
+        width: 95%;
+        background-color: #e7e7e7;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0px 0px 6px 3px #a0a0a0;
+    }
+
+    .gamesTitle {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: #2E2E2E;
+    }
+
+    .gamesTitleText {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 40px;
+        font-weight: 600;
+        text-indent: 55px;
+    }
+
+    .gamesBody {
+        margin-bottom: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .gamesContainer {
+        width: 970px;
+    }
+
+    .filterBox {
+        width: 350px;
+        justify-content: center;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .categoriesTextBox {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgb(185, 185, 185);
+        width: 300px;
+        justify-content: flex-start;
+        display: flex;
+    }
+
+    .categoriesText {
+        color: #2E2E2E;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 21px;
+        font-weight: 600;
+        text-indent: 35px;
+    }
+
+    .categoriesBox {
+        width: 230px;
+    }
+
+    .category {
+        margin-bottom: 7px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 230px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+
+    .categoryText {
+        padding-left: 10px;
+        color: #2E2E2E;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 19px;
+        font-weight: 400;
+        pointer-events: none;
+    }
+
+    .categoryNumber {
+        padding-right: 10px;
+        color: #5e5e5e;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        pointer-events: none;
+    }
+
+    .searchFilterContainer {
+        margin-top: 15px;
+        margin-bottom: 30px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .priceTextBox {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        padding-top: 40px;
+        width: 300px;
+        justify-content: flex-start;
+        display: flex;
+        border-bottom: 1px solid rgb(185, 185, 185);
+    }
+
+    .priceText {
+        color: #2E2E2E;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 21px;
+        font-weight: 600;
+        text-indent: 35px;
+    }
+
+    .euroText {
+        color: #696969;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        text-indent: 3px;
+    }
+
+    .priceSeparator {
+        margin-left: 10px;
+        margin-right: 10px;
+        color: #696969;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 21px;
+        font-weight: 600;
+    }
+
+    .searchFilterBox {
+        margin-bottom: 15px;
+        width: 250px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .textfield {
+        background-color: #f7f7f7;
+        border-radius: 3px;
+    }
+
+    .categoriesBox :hover {
+        background-color: #ff8400bd;
+    }
 }
 
-.bodyContainer {
-    margin-top: 70px;
-    margin-bottom: 80px;
-    width: 95%;
-    background-color: #e7e7e7;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    border-radius: 5px;
-    box-shadow: 0px 0px 6px 3px #a0a0a0;
+@media only screen and (min-width: 768px) {
+    .section {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        background-image: url(../../images/GameBackground.png);
+        background-attachment: fixed;
+    }
+
+    .titleContainer {
+        margin-top: 120px;
+        margin-bottom: 40px;
+        width: 77%;
+        justify-content: flex-start;
+    }
+
+    .title {
+        font-size: 36px;
+        font-weight: 600;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #ffffff;
+    }
+
+    .bodyContainer {
+        margin-top: 70px;
+        margin-bottom: 80px;
+        width: 95%;
+        background-color: #e7e7e7;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0px 0px 6px 3px #a0a0a0;
+    }
+
+    .gamesTitle {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: #2E2E2E;
+    }
+
+    .gamesTitleText {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 40px;
+        font-weight: 600;
+        text-indent: 55px;
+    }
+
+    .gamesBody {
+        margin-bottom: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .gamesContainer {
+        width: 970px;
+    }
+
+    .filterBox {
+        width: 350px;
+        justify-content: center;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .categoriesTextBox {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgb(185, 185, 185);
+        width: 300px;
+        justify-content: flex-start;
+        display: flex;
+    }
+
+    .categoriesText {
+        color: #2E2E2E;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 21px;
+        font-weight: 600;
+        text-indent: 35px;
+    }
+
+    .categoriesBox {
+        width: 230px;
+    }
+
+    .category {
+        margin-bottom: 7px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 230px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+
+    .categoryText {
+        padding-left: 10px;
+        color: #2E2E2E;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 19px;
+        font-weight: 400;
+        pointer-events: none;
+    }
+
+    .categoryNumber {
+        padding-right: 10px;
+        color: #5e5e5e;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        pointer-events: none;
+    }
+
+    .searchFilterContainer {
+        margin-top: 15px;
+        margin-bottom: 30px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .priceTextBox {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        padding-top: 40px;
+        width: 300px;
+        justify-content: flex-start;
+        display: flex;
+        border-bottom: 1px solid rgb(185, 185, 185);
+    }
+
+    .priceText {
+        color: #2E2E2E;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 21px;
+        font-weight: 600;
+        text-indent: 35px;
+    }
+
+    .euroText {
+        color: #696969;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        text-indent: 3px;
+    }
+
+    .priceSeparator {
+        margin-left: 10px;
+        margin-right: 10px;
+        color: #696969;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 21px;
+        font-weight: 600;
+    }
+
+    .searchFilterBox {
+        margin-bottom: 15px;
+        width: 250px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .textfield {
+        background-color: #f7f7f7;
+        border-radius: 3px;
+    }
+
+    .categoriesBox :hover {
+        background-color: #ff8400bd;
+    }
 }
 
-.gamesTitle {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    width: 100%;
-    color: #2E2E2E;
+@media only screen and (min-width: 922px) {
+    .section {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        background-image: url(../../images/GameBackground.png);
+        background-attachment: fixed;
+    }
+
+    .titleContainer {
+        margin-top: 120px;
+        margin-bottom: 40px;
+        width: 77%;
+        justify-content: flex-start;
+    }
+
+    .title {
+        font-size: 36px;
+        font-weight: 600;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #ffffff;
+    }
+
+    .bodyContainer {
+        margin-top: 70px;
+        margin-bottom: 80px;
+        width: 95%;
+        background-color: #e7e7e7;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0px 0px 6px 3px #a0a0a0;
+    }
+
+    .gamesTitle {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: #2E2E2E;
+    }
+
+    .gamesTitleText {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 40px;
+        font-weight: 600;
+        text-indent: 55px;
+    }
+
+    .gamesBody {
+        margin-bottom: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .gamesContainer {
+        width: 970px;
+    }
+
+    .filterBox {
+        width: 350px;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .categoriesTextBox {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgb(185, 185, 185);
+        width: 300px;
+        justify-content: flex-start;
+        display: flex;
+    }
+
+    .categoriesText {
+        color: #2E2E2E;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 21px;
+        font-weight: 600;
+        text-indent: 35px;
+    }
+
+    .categoriesBox {
+        width: 230px;
+    }
+
+    .category {
+        margin-bottom: 7px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 230px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+
+    .categoryText {
+        padding-left: 10px;
+        color: #2E2E2E;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 19px;
+        font-weight: 400;
+        pointer-events: none;
+    }
+
+    .categoryNumber {
+        padding-right: 10px;
+        color: #5e5e5e;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        pointer-events: none;
+    }
+
+    .searchFilterContainer {
+        margin-top: 15px;
+        margin-bottom: 30px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .priceTextBox {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        padding-top: 40px;
+        width: 300px;
+        justify-content: flex-start;
+        display: flex;
+        border-bottom: 1px solid rgb(185, 185, 185);
+    }
+
+    .priceText {
+        color: #2E2E2E;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 21px;
+        font-weight: 600;
+        text-indent: 35px;
+    }
+
+    .euroText {
+        color: #696969;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        text-indent: 3px;
+    }
+
+    .priceSeparator {
+        margin-left: 10px;
+        margin-right: 10px;
+        color: #696969;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 21px;
+        font-weight: 600;
+    }
+
+    .searchFilterBox {
+        margin-bottom: 15px;
+        width: 250px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .textfield {
+        background-color: #f7f7f7;
+        border-radius: 3px;
+    }
+
+    .categoriesBox :hover {
+        background-color: #ff8400bd;
+    }
 }
 
-.gamesTitleText {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 40px;
-    font-weight: 600;
-    text-indent: 55px;
-}
+@media only screen and (min-width: 1200px) {
+    .section {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        background-image: url(../../images/GameBackground.png);
+        background-attachment: fixed;
+    }
 
-.gamesBody {
-    margin-bottom: 10px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-}
+    .titleContainer {
+        margin-top: 120px;
+        margin-bottom: 40px;
+        width: 77%;
+        justify-content: flex-start;
+    }
 
-.gamesContainer {
-    width: 970px;
-}
+    .title {
+        font-size: 36px;
+        font-weight: 600;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #ffffff;
+    }
 
-.filterBox {
-    width: 350px;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .bodyContainer {
+        margin-top: 70px;
+        margin-bottom: 80px;
+        width: 95%;
+        background-color: #e7e7e7;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0px 0px 6px 3px #a0a0a0;
+    }
 
-.categoriesTextBox {
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgb(185, 185, 185);
-    width: 300px;
-    justify-content: flex-start;
-    display: flex;
-}
+    .gamesTitle {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: #2E2E2E;
+    }
 
-.categoriesText {
-    color: #2E2E2E;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 21px;
-    font-weight: 600;
-    text-indent: 35px;
-}
+    .gamesTitleText {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 40px;
+        font-weight: 600;
+        text-indent: 55px;
+    }
 
-.categoriesBox {
-    width: 230px;
-}
+    .gamesBody {
+        margin-bottom: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
 
-.category {
-    margin-bottom: 7px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    width: 230px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    border-radius: 3px;
-}
+    .gamesContainer {
+        width: 970px;
+    }
 
-.categoryText {
-    padding-left: 10px;
-    color: #2E2E2E;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 19px;
-    font-weight: 400;
-    pointer-events: none;
-}
+    .filterBox {
+        width: 350px;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.categoryNumber {
-    padding-right: 10px;
-    color: #5e5e5e;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    pointer-events: none;
-}
+    .categoriesTextBox {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgb(185, 185, 185);
+        width: 300px;
+        justify-content: flex-start;
+        display: flex;
+    }
 
-.searchFilterContainer {
-    margin-top: 15px;
-    margin-bottom: 30px;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .categoriesText {
+        color: #2E2E2E;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 21px;
+        font-weight: 600;
+        text-indent: 35px;
+    }
 
-.priceTextBox {
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    padding-top: 40px;
-    width: 300px;
-    justify-content: flex-start;
-    display: flex;
-    border-bottom: 1px solid rgb(185, 185, 185);
-}
+    .categoriesBox {
+        width: 230px;
+    }
 
-.priceText {
-    color: #2E2E2E;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 21px;
-    font-weight: 600;
-    text-indent: 35px;
-}
+    .category {
+        margin-bottom: 7px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 230px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 3px;
+    }
 
-.euroText {
-    color: #696969;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    text-indent: 3px;
-}
+    .categoryText {
+        padding-left: 10px;
+        color: #2E2E2E;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 19px;
+        font-weight: 400;
+        pointer-events: none;
+    }
 
-.priceSeparator {
-    margin-left: 10px;
-    margin-right: 10px;
-    color: #696969;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 21px;
-    font-weight: 600;
-}
+    .categoryNumber {
+        padding-right: 10px;
+        color: #5e5e5e;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        pointer-events: none;
+    }
 
-.searchFilterBox {
-    margin-bottom: 15px;
-    width: 250px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
+    .searchFilterContainer {
+        margin-top: 15px;
+        margin-bottom: 30px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.textfield {
-    background-color: #f7f7f7;
-    border-radius: 3px;
-}
+    .priceTextBox {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        padding-top: 40px;
+        width: 300px;
+        justify-content: flex-start;
+        display: flex;
+        border-bottom: 1px solid rgb(185, 185, 185);
+    }
 
-.categoriesBox :hover {
-    background-color: #ff8400bd;
+    .priceText {
+        color: #2E2E2E;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 21px;
+        font-weight: 600;
+        text-indent: 35px;
+    }
+
+    .euroText {
+        color: #696969;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        text-indent: 3px;
+    }
+
+    .priceSeparator {
+        margin-left: 10px;
+        margin-right: 10px;
+        color: #696969;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 21px;
+        font-weight: 600;
+    }
+
+    .searchFilterBox {
+        margin-bottom: 15px;
+        width: 250px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .textfield {
+        background-color: #f7f7f7;
+        border-radius: 3px;
+    }
+
+    .categoriesBox :hover {
+        background-color: #ff8400bd;
+    }
 }

@@ -1,28 +1,51 @@
 import React from 'react'
+import clsx from 'clsx';
+import { makeStyles } from '@material-ui/core/styles';
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import styles from './style.module.css'
-import GamesContainer from '../GamesContainer'
 import { TextField } from '@material-ui/core'
-import FiltersButton from '../FiltersButton'
+import FiltersIcon from '../../images/FilterIcon.png'
+import ButtonEscape from '../../images/MenuEscape.png'
 
 const categoryFilters = ['Indie', 'Action', 'Adventure', 'Strategy', 'Simulator', 
                         'RPG', 'Arcade', 'Sports', 'Racing', 'Puzzle', 'Fighting']
 
 const consoleFilters = ['PC', 'PS2', 'PS3', 'PS4', 'PS5', 'XBox']
 
-const GamesBody = () => (
-  <section className={styles.section}>
-    <div className={styles.titleContainer}>
-      <p className={styles.title}>Search and buy</p>
-    </div>
+const useStyles = makeStyles({
+  list: {
+    width: 300,
+  },
+  fullList: {
+    width: 'auto',
+  },
+});
 
-    <div className={styles.bodyContainer}>
-      <div className={styles.gamesTitle}>
-        <p className={styles.gamesTitleText}>Games</p>
-        <FiltersButton />
-      </div>
+const FiltersButton = () => {
 
-      <div className={styles.gamesBody}>
-        <div className={styles.filterBox}>
+  const classes = useStyles();
+  const [state, setState] = React.useState({
+    left: false,
+  });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
+
+  const list = (anchor) => (
+    <div
+      className={clsx(classes.list, {
+        [classes.fullList]: anchor === 'top' || anchor === 'bottom',
+      })}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <div className={styles.filterBox}>
           <div className={styles.categoriesTextBox}>
             <p className={styles.categoriesText}>Categories</p>
           </div>
@@ -77,12 +100,29 @@ const GamesBody = () => (
           </div>
 
         </div>
-        <div className={styles.gamesContainer}>
-          <GamesContainer />
-        </div>
-      </div>
     </div>
-  </section>
-)
+  );
 
-export default GamesBody
+  return (
+    <section className={styles.section}>
+      {['left'].map((anchor) => (
+        <React.Fragment key={anchor}>
+          <div className={styles.button} onClick={toggleDrawer(anchor, true)}>
+            <img src={state.left ? ButtonEscape : FiltersIcon} width='45px' height='45px'></img>
+          </div>
+          
+          <SwipeableDrawer
+            anchor={anchor}
+            open={state[anchor]}
+            onClose={toggleDrawer(anchor, false)}
+            onOpen={toggleDrawer(anchor, true)}
+          >
+            {list(anchor)}
+          </SwipeableDrawer>
+        </React.Fragment>
+      ))}
+    </section>
+  )
+}
+
+export default FiltersButton
