@@ -15,8 +15,6 @@ const GamesBody = () => {
     clicked: false
   });
   
-  console.log(selected);
-  
   return(
   <section className={styles.section}>
     <div className={styles.titleContainer}>

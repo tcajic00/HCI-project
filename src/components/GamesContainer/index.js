@@ -26,7 +26,7 @@ const GamesContainer = (props) => {
         }
       }`)
 
-      //console.log(props.selected);
+      
       return (
         <section className={styles.section}>
           <div className={styles.cardContainer}>
