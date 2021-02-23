@@ -12,7 +12,8 @@ const Games = ({ pageContext }) => {
   const { price, title, introduction, mainImage, firstPharagraph, firstImage,
     secondImage, secondPharagraph, thirdPharagraph, keyFeatures, thirdImage,
     fourthImage, systemRequirements, info } = pageContext
- 
+
+
   return (
     <section className={style.container}>
         <TitleComponent title={title} />

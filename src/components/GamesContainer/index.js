@@ -3,7 +3,7 @@ import {useStaticQuery, graphql, Link} from 'gatsby'
 import Img from 'gatsby-image'
 import styles from './style.module.css'
  
-const GamesContainers = () => {
+const GamesContainer = (props) => {
     const data = useStaticQuery(graphql`
     query GamesQuery {
         allContentfulGames(filter: {node_locale: {eq: "en-US"}}) {
@@ -25,11 +25,12 @@ const GamesContainers = () => {
           }
         }
       }`)
-   
+
+      //console.log(props.selected);
       return (
         <section className={styles.section}>
           <div className={styles.cardContainer}>
-            {data.allContentfulGames.nodes.map(node => {
+            {data.allContentfulGames.nodes.filter(node => node.console.includes(props.selected.category)).map(node => {
               return (
                   <div className={styles.card}>
                     <Link to={`/games/${node.slug}`}>
@@ -48,4 +49,4 @@ const GamesContainers = () => {
   )
 }
  
-export default GamesContainers
+export default GamesContainer

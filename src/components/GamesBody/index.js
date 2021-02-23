@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, setState} from 'react'
 import styles from './style.module.css'
 import GamesContainer from '../GamesContainer'
 import { TextField } from '@material-ui/core'
@@ -9,7 +9,15 @@ const categoryFilters = ['Indie', 'Action', 'Adventure', 'Strategy', 'Simulator'
 
 const consoleFilters = ['PC', 'PS2', 'PS3', 'PS4', 'PS5', 'XBox']
 
-const GamesBody = () => (
+const GamesBody = () => {
+  const [selected, setSelected] = useState({
+    category: '(',
+    clicked: false
+  });
+  
+  console.log(selected);
+  
+  return(
   <section className={styles.section}>
     <div className={styles.titleContainer}>
       <p className={styles.title}>Search and buy</p>
@@ -68,7 +76,7 @@ const GamesBody = () => (
 
           <div className={styles.categoriesBox}>
               {consoleFilters.map(console => (
-                <div className={styles.category}>
+                <div  className={styles.category} onClick={() => setSelected({category: selected.category == console ? '(' : console, clicked: true})}>
                   <p className={styles.categoryText}>{console}</p>
                   <p className={styles.categoryNumber}>10</p>
                 </div>
@@ -78,11 +86,14 @@ const GamesBody = () => (
 
         </div>
         <div className={styles.gamesContainer}>
-          <GamesContainer />
+          <GamesContainer selected={selected}/>
         </div>
       </div>
     </div>
   </section>
 )
+
+
+}
 
 export default GamesBody
