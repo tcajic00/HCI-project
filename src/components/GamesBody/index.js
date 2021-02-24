@@ -12,8 +12,10 @@ const consoleFilters = ['PC', 'PS2', 'PS3', 'PS4', 'PS5', 'XBox']
 const GamesBody = () => {
   const [selected, setSelected] = useState({
     category: '(',
-    clicked: false
+    activeButton: null
   });
+
+  
   
   return(
   <section className={styles.section}>
@@ -73,10 +75,13 @@ const GamesBody = () => {
           </div>
 
           <div className={styles.categoriesBox}>
-              {consoleFilters.map(console => (
-                <div  className={styles.category} onClick={() => setSelected({category: selected.category == console ? '(' : console, clicked: true})}>
+              {consoleFilters.map((console, index) => (
+                <div 
+                className={selected.activeButton == index ? styles.categoryClicked : styles.category} 
+                onClick={() => setSelected({category: selected.category == console ? '(' : console, activeButton: selected.category == console ? null : index })}
+                >
                   <p className={styles.categoryText}>{console}</p>
-                  <p className={styles.categoryNumber}>10</p>
+                  <p className={styles.categoryNumber}>{index}</p>
                 </div>
               )
               )}
