@@ -81,7 +81,7 @@ const GamesBody = () => {
                 onClick={() => setSelected({category: selected.category == console ? '(' : console, activeButton: selected.category == console ? null : index })}
                 >
                   <p className={styles.categoryText}>{console}</p>
-                  <p className={styles.categoryNumber}>{index}</p>
+                  <p className={styles.categoryNumber}>10</p>
                 </div>
               )
               )}
