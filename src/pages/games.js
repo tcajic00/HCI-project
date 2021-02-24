@@ -13,7 +13,7 @@ const GamesPage = () => {
     setInput(event.target.value);
   }
 
-  //console.log(searchInput);
+  
   
 return(
   <main className={styles.container}>

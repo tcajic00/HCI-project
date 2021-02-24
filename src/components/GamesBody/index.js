@@ -14,6 +14,15 @@ const GamesBody = (props) => {
     category: '(',
     activeButton: null
   });
+
+  const [genre, setGenre] = useState({
+    sel: '',
+    active: null
+  })
+
+  const handleGenreButton = (category, index) => {
+    setGenre({sel: genre.sel == category ? '' : category, active: genre.sel == category ? null : index })
+  }
   
   return(
   <section className={styles.section}>
@@ -34,8 +43,11 @@ const GamesBody = (props) => {
           </div>
 
           <div className={styles.categoriesBox}>
-              {categoryFilters.map(category => (
-                <div className={styles.category}>
+              {categoryFilters.map((category, index) => (
+                <div 
+                className={genre.active == index ? styles.categoryClicked : styles.category}
+                onClick={() => handleGenreButton(category, index)}
+                >
                   <p className={styles.categoryText}>{category}</p>
                   <p className={styles.categoryNumber}>10</p>
                 </div>
@@ -87,7 +99,7 @@ const GamesBody = (props) => {
 
         </div>
         <div className={styles.gamesContainer}>
-          <GamesContainer searched={props.input} selected={selected}/>
+          <GamesContainer genre={genre} searched={props.input} selected={selected}/>
         </div>
       </div>
     </div>
