@@ -7,8 +7,8 @@ import { TextField } from '@material-ui/core'
 import FiltersIcon from '../../images/FilterIcon.png'
 import ButtonEscape from '../../images/MenuEscape.png'
 
-const categoryFilters = ['Indie', 'Action', 'Adventure', 'Strategy', 'Simulator', 
-                        'RPG', 'Arcade', 'Sports', 'Racing', 'Puzzle', 'Fighting']
+const categoryFilters = ['Indie', 'Action', 'Adventure', 'Strategy', 'Simulation', 
+                         'Arcade', 'Sports', 'Racing', 'Puzzle']
 
 const consoleFilters = ['PC', 'PS2', 'PS3', 'PS4', 'PS5', 'XBox']
 
