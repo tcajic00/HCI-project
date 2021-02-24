@@ -10,7 +10,34 @@ import ButtonStripes from '../../images/MenuStripes.png'
 import ButtonEscape from '../../images/MenuEscape.png'
 import Logo from '../../components/Logo'
 
-const loggedIn = () => !!localStorage.getItem('loggedIn');
+const setItem = (key, item) => {
+  if (typeof window === 'undefined') {
+    return null
+  }
+  localStorage.setItem(key, item)
+}
+
+const getItem = item => {
+  if (typeof window === 'undefined') {
+    return null
+  }
+  return localStorage.getItem(item)
+}
+
+const removeItem = item => {
+  if (typeof window === 'undefined') {
+    return null
+  }
+  localStorage.removeItem(item)
+}
+
+export const myLocalStorage = {
+  getItem,
+  setItem,
+  removeItem
+}
+
+const loggedIn = () => !!myLocalStorage.getItem('loggedIn');
 
 const useStyles = makeStyles({
   list: {
@@ -65,7 +92,7 @@ const MenuButton = ({ activeTab }) => {
                 </Link>)
               )}
               <Link to={loggedIn() ? '/' : '/login'} >
-                <li onClick={loggedIn() ? () => localStorage.removeItem('loggedIn') : () => {}} className={"Log in" === activeTab ? styles.active : ''}>
+                <li onClick={loggedIn() ? () => myLocalStorage.removeItem('loggedIn') : () => {}} className={"Log in" === activeTab ? styles.active : ''}>
                   {loggedIn() ? 'Log out' : 'Log in'}
                 </li>
               </Link>
