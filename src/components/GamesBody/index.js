@@ -9,13 +9,11 @@ const categoryFilters = ['Indie', 'Action', 'Adventure', 'Strategy', 'Simulator'
 
 const consoleFilters = ['PC', 'PS2', 'PS3', 'PS4', 'PS5', 'XBox']
 
-const GamesBody = () => {
+const GamesBody = (props) => {
   const [selected, setSelected] = useState({
     category: '(',
     activeButton: null
   });
-
-  
   
   return(
   <section className={styles.section}>
@@ -89,7 +87,7 @@ const GamesBody = () => {
 
         </div>
         <div className={styles.gamesContainer}>
-          <GamesContainer selected={selected}/>
+          <GamesContainer searched={props.input} selected={selected}/>
         </div>
       </div>
     </div>
