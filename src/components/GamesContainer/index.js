@@ -31,7 +31,7 @@ const GamesContainer = (props) => {
       return (
         <section className={styles.section}>
           <div className={styles.cardContainer}>
-            {data.allContentfulGames.nodes.filter(node => node.console.includes(props.selected.category)).filter(node => node.title.toLowerCase().includes(props.searched)).map(node => {
+            {data.allContentfulGames.nodes.filter(node => node.console.includes(props.selected.category)).filter(node => node.title.toLowerCase().includes(props.searched.toLowerCase())).map(node => {
               return (
                   <div className={styles.card}>
                     <Link to={`/games/${node.slug}`}>
