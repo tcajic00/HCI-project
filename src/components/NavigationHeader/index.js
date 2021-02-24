@@ -5,12 +5,14 @@ import NavigationBar from '../NavigationBar'
 import MenuButton from '../MenuButton'
 import styles from './style.module.css'
 
-const NavigationHeader = ({ activeTab }) => (
+const NavigationHeader = (props) => {
+  //console.log(inputProp.input);
+return (
   <section className={styles.navigationHeader}>
-      <Navigation />
-      <NavigationBar activeTab={activeTab}/>
-      <MenuButton activeTab={activeTab}/>
+      <Navigation props={props}/>
+      <NavigationBar activeTab={props.activeTab}/>
+      <MenuButton activeTab={props.activeTab}/>
   </section>
 )
-
+}
 export default NavigationHeader

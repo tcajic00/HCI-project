@@ -36,6 +36,8 @@ const FiltersButton = () => {
     setState({ ...state, [anchor]: open });
   };
 
+ 
+
   const list = (anchor) => (
     <div
       className={clsx(classes.list, {

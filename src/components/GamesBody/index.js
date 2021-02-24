@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, setState} from 'react'
 import styles from './style.module.css'
 import GamesContainer from '../GamesContainer'
 import { TextField } from '@material-ui/core'
@@ -9,7 +9,13 @@ const categoryFilters = ['Indie', 'Action', 'Adventure', 'Strategy', 'Simulation
 
 const consoleFilters = ['PC', 'PS2', 'PS3', 'PS4', 'PS5', 'XBox']
 
-const GamesBody = () => (
+const GamesBody = (props) => {
+  const [selected, setSelected] = useState({
+    category: '(',
+    activeButton: null
+  });
+  
+  return(
   <section className={styles.section}>
     <div className={styles.titleContainer}>
       <p className={styles.title}>Search and buy</p>
@@ -67,8 +73,11 @@ const GamesBody = () => (
           </div>
 
           <div className={styles.categoriesBox}>
-              {consoleFilters.map(console => (
-                <div className={styles.category}>
+              {consoleFilters.map((console, index) => (
+                <div 
+                className={selected.activeButton == index ? styles.categoryClicked : styles.category} 
+                onClick={() => setSelected({category: selected.category == console ? '(' : console, activeButton: selected.category == console ? null : index })}
+                >
                   <p className={styles.categoryText}>{console}</p>
                   <p className={styles.categoryNumber}>10</p>
                 </div>
@@ -78,11 +87,14 @@ const GamesBody = () => (
 
         </div>
         <div className={styles.gamesContainer}>
-          <GamesContainer />
+          <GamesContainer searched={props.input} selected={selected}/>
         </div>
       </div>
     </div>
   </section>
 )
+
+
+}
 
 export default GamesBody
