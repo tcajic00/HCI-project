@@ -7,3 +7,6 @@ https://www.figma.com/proto/NxLpcGMgc2K4n3NtArNls0/Untitled?node-id=5%3A5&scalin
 
 ### High fidelity (mobile) in Figma:
 https://www.figma.com/proto/NxLpcGMgc2K4n3NtArNls0/Untitled?node-id=189%3A3&scaling=scale-down
+
+### Web page:
+https://games-for-you.netlify.app/
